@@ -6,7 +6,7 @@ namespace CInemaApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hel hbhb World!");
+            Console.WriteLine("Hello World!");
         }
     }
 }
