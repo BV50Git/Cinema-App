@@ -6,21 +6,17 @@ namespace CInemaApp
     {
         static void Main(string[] args)
         {
-            static void testdef()
+            static void STARS()
             {
-                Console.WriteLine("teeesssttttt");
+                Console.Write("**********");
             }
-
-            static void part2()
+            
+            static void Menu()
             {
-                Console.WriteLine("neeeeiiiiiinnnnnn");
+                STARS();
+                
             }
-
-            int inp = Convert.ToInt32(Console.ReadLine());
-            if (inp > 0)
-                testdef();
-            else
-                part2();
+    
         }
     }
 }
