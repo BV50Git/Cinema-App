@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 
 namespace CInemaApp
 {
@@ -14,7 +15,9 @@ namespace CInemaApp
             static void Menu()
             {
                 STARS();
-                
+                Console.WriteLine("[1] - Current Movies");
+
+                if ();
             }
     
         }
