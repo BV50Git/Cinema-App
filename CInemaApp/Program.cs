@@ -6,7 +6,14 @@ namespace CInemaApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("teeeessssttttttttttttt");
+            static void testdef()
+            {
+                Console.WriteLine("teeesssttttt");
+            }
+
+            int inp = Convert.ToInt32(Console.ReadLine());
+            if (inp > 0)
+                testdef();
         }
     }
 }
