@@ -21,11 +21,11 @@ namespace CInemaApp
             }
             static void Current()
             {
-
+                bb();
             }
             static void Upcoming()
             {
-
+                bb();
             }
             static void Prices()
             {
@@ -49,15 +49,15 @@ namespace CInemaApp
             }
             static void Events()
             {
-
+                bb();
             }
             static void Sally()
             {
-
+                bb();
             }
             static void bb()
             {
-                Console.WriteLine("To go back to the main menu press Enter.");
+                Console.WriteLine("To go back to the main menu, please press Enter.");
                 string key = Console.ReadLine();
 
                 if (key == "" + "")
@@ -73,10 +73,12 @@ namespace CInemaApp
                     case "1":
                         STARS();
                         Console.WriteLine("Welcome to the current movies page!");
+                        Current();
                         break;
                     case "2":
                         STARS();
                         Console.WriteLine("Welcome to the upcoming movies page!");
+                        Upcoming();
                         break;
                     case "3":
                         STARS();
@@ -85,16 +87,19 @@ namespace CInemaApp
                     case "4":
                         STARS();
                         Console.WriteLine("Welcome to the events page!");
+                        Events();
                         break;
                     case "5":
                         STARS();
                         Console.WriteLine("Welcome to sally's cafe page!");
+                        Sally();
                         break;
                     case "6":
                         STARS();
                         Contact();
                         break;
                     case "7":
+                        Console.WriteLine("Goodbye.");
                         break;
                     default:
                         Console.WriteLine("False input. Try again.");
