@@ -24,7 +24,7 @@ namespace CInemaApp
 
             // function to change time/date/location movies will be played at.
             // this function needs allot more work, mostly on the design.
-            string location = "locatie: Rotterdam, Wijnhaven 107.";
+            string location = "location: Rotterdam, Wijnhaven 107.";
             var array_movie_times_and_location = new System.Collections.Generic.List<string>() {};
             Console.WriteLine("type 1 to add specifics for a movie, anything else to leave");
             string a = Console.ReadLine();
