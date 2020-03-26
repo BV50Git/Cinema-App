@@ -1,15 +1,18 @@
 ﻿using System;
+
 namespace CinemaApp
-{
-    class Program
-    {
+{   
+    class program
+    { 
         static void Main(string[] args)
         {
             int width = 0;
             int height = 0;
             int movieHall = 1;
-            var userRow = 0;
-            var userColumn = 0;
+            int userRow = 0;
+            int userColumn = 0;
+            var userRows = new System.Collections.Generic.List<int>();
+            var userColumns = new System.Collections.Generic.List<int>();
 
             if (movieHall == 1)
             {
@@ -33,20 +36,20 @@ namespace CinemaApp
                 {
                     for (int o = 0; o < width; o++)
                     {
-                        if (userRow == i + 1 && userColumn == o + 1)
+                        if (userRows.Contains(o+1)  && userColumns.Contains(i+1))
                         {
-                            Console.Write("X");
+                            Console.Write(" [X] " );
                         }
                         else
                         {
-                            Console.Write("O");
+                            Console.Write(" [O] ");
                         }
                     }
                     Console.Write("\n");
                 }
             }
             void seatSelection()
-            {
+            {   
                 Console.WriteLine("Enter the row of the seat you want to reserve (1 - " + height + ")");
                 bool parseSucc = int.TryParse(Console.ReadLine(), out userRow);
                 if (parseSucc)
@@ -54,21 +57,25 @@ namespace CinemaApp
                     Console.WriteLine(userRow);
                 }
                 Console.WriteLine("Enter the column of the seat you want to reserve (1 - " + width + ")");
-                bool parseSucc = int.TryParse(Console.ReadLine(), out userColumn);
+                parseSucc = int.TryParse(Console.ReadLine(), out userColumn);
                 if (parseSucc)
                 {
                     Console.WriteLine(userColumn);
                 }
+                userRows.Add(userRow);
+                userColumns.Add(userColumn);
                 showSeats();
             }
             showSeats();
             seatSelection();
-            Console.WriteLine("Type OK to confirm reservation, type anything else to select a different seat.");
+            Console.WriteLine("Type OK to confirm reservation, type anything else to select another seat.");
             while(Console.ReadLine() != "OK")
-            {
+            {       
                 seatSelection();
                 Console.WriteLine("Type OK to confirm reservation, type anything else to select a different seat.");
+    
             }
+            
         }
     }
 
