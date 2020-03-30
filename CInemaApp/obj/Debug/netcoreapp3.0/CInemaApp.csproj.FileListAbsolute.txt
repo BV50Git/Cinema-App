@@ -9,3 +9,5 @@ D:\documenten\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.dll
 D:\documenten\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.pdb
 D:\documenten\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.dll
 D:\documenten\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.pdb
+D:\documenten\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+D:\documenten\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CopyComplete

@@ -1,11 +1,19 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace CInemaApp
+
 {
+    // global class to use the variables in different things
+    public class Globals
+    {
+        public static string[] array;
+        public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
+    }
     // administrator class so the administrator can use specific functions and add data needed in the application
     public class Administrator
     {
-
+        // creates the price classes on the bases of age
         public string[] Age_prices_array()
         {
             string[] agebrackets_in_cinema = { "below age 10", "age 10 to 15", "age 16 to 26", "age 27 to 50", "50+" };
@@ -17,6 +25,9 @@ namespace CInemaApp
                 string agebracket_and_price = Console.ReadLine();
                 array[i] = agebrackets_in_cinema[i] + " " + agebracket_and_price;
             }
+
+            //var stringjson = JsonConvert.SerializeObject(array, Formatting.Indented);
+            //System.IO.File.AppendAllText(@"C: \Users\Acer\AppData\Local\Temp\~vs39C6.json", stringjson);
             return array;
         }
         public System.Collections.Generic.List<string> Times_and_dates()
@@ -36,10 +47,12 @@ namespace CInemaApp
             return array_movie_times_and_location;
         }
 
+
+
         // the class for the costumer this way the costumer can use different functions within the application
         public class Costumer
         {
-            public System.Collections.Generic.List<string>  array_movie_times_and_location;
+            public System.Collections.Generic.List<string> array_movie_times_and_location;
             public string[] Newarray;
             public string[] Shows_prices_by_age()
             {
@@ -54,10 +67,11 @@ namespace CInemaApp
             public System.Collections.Generic.List<string> Show_times_and_dates()
             {
                 Console.WriteLine(array_movie_times_and_location);
-                return array_movie_times_and_location;
+                var Newarray = array_movie_times_and_location;
+                return Newarray;
             }
         }
-        
+
 
         class Program
         {
@@ -65,20 +79,49 @@ namespace CInemaApp
             // also will this be more with if statements so the costumer can choose what they want to see, the same goes for the administrator
             static void Main(string[] args)
             {
-                string[] array = { "1", "3", "3", "4", "5" };
-                Administrator testing = new Administrator();
-                array = testing.Age_prices_array();
-                System.Collections.Generic.List<string> array_movie_times_and_location = testing.Times_and_dates();
+                // start the while loop
+                string x = "0";
+                while (x != "4")
+                {
+                    x = Console.ReadLine();
+                    if (x == "1")
+                    // option to create the arrays of information in final program only useable by administrato
+                    {
+                        Administrator testing = new Administrator();
+                        string[] array = testing.Age_prices_array();
+                        System.Collections.Generic.List<string> Newarray_movie_times_and_location = testing.Times_and_dates();
+                        Globals.Newarray_movie_times_and_location = Newarray_movie_times_and_location;
+                        Globals.array = array;
+                    }
+                    if (x == "2")
+                    // option to write information into the json file
+                    {
+                        Console.WriteLine("here");
+                        Costumer testuser = new Costumer();
 
-                Costumer testuser = new Costumer();
+                        testuser.Newarray = Globals.array;
 
-                testuser.Newarray = array;
-                testuser.Shows_prices_by_age();
-                testuser.Show_times_and_dates();
-
+                        testuser.array_movie_times_and_location = Globals.Newarray_movie_times_and_location;
+                        var stringjson = JsonConvert.SerializeObject(testuser, Formatting.Indented);
 
 
+                        System.IO.File.WriteAllText(@"C:\Users\Acer\source\repos\json1.json", stringjson);
+                    }
+                    // needs t read from json file to print the information the user needs to see/ known problems does not print the times and date information
+                    // still is unable to read from the json file
+                    if (x == "3")
+                    {
+                        Console.WriteLine("here");
+                        Costumer testuser = new Costumer();
 
+                        testuser.Newarray = Globals.array;
+                        testuser.Shows_prices_by_age();
+                        testuser.array_movie_times_and_location = Globals.Newarray_movie_times_and_location;
+
+
+                    
+                    }
+                }
             }
         }
     }
