@@ -24,6 +24,7 @@ namespace CInemaApp
         }
     }
 
+    // menu screen for the user
     public class User
     {
         public static void STARS()
@@ -151,6 +152,7 @@ namespace CInemaApp
 
     }
 
+    // menu screen for the admin
     public class Admin
     {
         public static void Menu()
