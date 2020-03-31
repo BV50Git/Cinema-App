@@ -60,6 +60,8 @@ namespace CInemaApp
 
             if (key == "" + "")
                 Menu();
+            else
+                bb();
 
         }
 
@@ -121,6 +123,15 @@ namespace CInemaApp
 
             Choices();
 
+        }
+
+    }
+
+    public class Admin
+    {
+        public static void test()
+        {
+            Console.WriteLine("Are you an Admin or User?");
         }
     }
     class Program
