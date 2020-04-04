@@ -1,15 +1,5 @@
 [
   {
-    "name": "ghgxhgx",
-    "description": "hooi",
-    "duration": 10
-  },
-  {
-    "name": "xlkhvbdskvjbdslkbj",
-    "description": "hooi",
-    "duration": 10
-  },
-  {
     "name": "hgfjhf",
     "description": "hooi",
     "duration": 10
@@ -28,5 +18,15 @@
     "name": "star wars",
     "description": "hooi",
     "duration": 10
+  },
+  {
+    "name": "test5",
+    "description": "dit is een test",
+    "duration": 10
+  },
+  {
+    "name": "test69",
+    "description": "dit is test 69",
+    "duration": 69
   }
 ]

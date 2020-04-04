@@ -34,7 +34,9 @@ namespace CInemaApp
                 else if (val == "1")
                 {
                     string filmname = Console.ReadLine();
-                    Movie movie1 = new Movie(filmname, "hooi", 10); // new object
+                    string description = Console.ReadLine();
+                    int duration = Convert.ToInt32(Console.ReadLine());
+                    Movie movie1 = new Movie(filmname, description, duration); // new object
                     List<Movie> list = Data.LoadMovies();
                     list.Add(movie1);
                     var test = JsonConvert.SerializeObject(list, Formatting.Indented);
@@ -43,7 +45,29 @@ namespace CInemaApp
                 // remove a movie based on a position
                 else if (val == "2")
                 {
-                    Console.WriteLine("i cant remove yet");
+                    //can be found at MovieData.cs 
+                    List<Movie> list = Data.LoadMovies();
+                    for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+                    {
+                        Console.WriteLine(x + Data.LoadMovies()[x - 1].GetMovieName());
+                   
+                    }
+                    Console.WriteLine("type the name of the movie that you want to remove: ");
+                    string r = Console.ReadLine();
+                    
+                    //goes through the whole json file
+                    for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+                    {
+                        // removes a movie if it found a name with the same input
+                       if ( r == Data.LoadMovies()[x - 1].GetMovieName())
+                        {
+                            list.RemoveAt(x - 1);
+                        }
+                       
+                    }
+                    // sends the data back to the json file
+                    var test = JsonConvert.SerializeObject(list, Formatting.Indented);
+                    File.WriteAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\movies.json", test);
                 }
                 else
                 {

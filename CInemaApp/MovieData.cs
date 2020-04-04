@@ -14,7 +14,6 @@ public static class Data
             string json = r.ReadToEnd();
             List<Movie> items = JsonConvert.DeserializeObject<List<Movie>>(json);
             return items;
-
             /*foreach(Movie item in items){
                 Console.WriteLine(item.GetMovieDetails() + "\n\n");
             }*/
