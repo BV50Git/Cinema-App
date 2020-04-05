@@ -54,7 +54,7 @@ namespace CInemaApp
                     }
                     Console.WriteLine("type the name of the movie that you want to remove: ");
                     string r = Console.ReadLine();
-                    
+                    bool found = false;
                     //goes through the whole json file
                     for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
                     {
@@ -62,8 +62,13 @@ namespace CInemaApp
                        if ( r == Data.LoadMovies()[x - 1].GetMovieName())
                         {
                             list.RemoveAt(x - 1);
+                            found = true;
                         }
                        
+                    }
+                    if (found == false)
+                    {
+                        Console.WriteLine("the movie is not found");
                     }
                     // sends the data back to the json file
                     var test = JsonConvert.SerializeObject(list, Formatting.Indented);
