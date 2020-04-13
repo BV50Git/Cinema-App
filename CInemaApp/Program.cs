@@ -18,7 +18,7 @@ namespace CInemaApp
                 // shows every movie name in the list
                 for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
                 {
-                    Console.WriteLine(x + Data.LoadMovies()[x - 1].GetMovieName());
+                    Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
                 }
                     // a little menu 
                 Console.WriteLine("enter 1 for adding movies");
@@ -33,10 +33,15 @@ namespace CInemaApp
                 // add a movie
                 else if (val == "1")
                 {
+                    Console.WriteLine("Name of the movie: ");
                     string filmname = Console.ReadLine();
+                    Console.WriteLine("Description of the movie: ");
                     string description = Console.ReadLine();
+                    Console.WriteLine("Duration of the movie: ");
                     int duration = Convert.ToInt32(Console.ReadLine());
-                    Movie movie1 = new Movie(filmname, description, duration); // new object
+                    Console.WriteLine("Genre of the movie: ");
+                    string genre = Console.ReadLine();
+                    Movie movie1 = new Movie(filmname, description, duration, genre); // new object
                     List<Movie> list = Data.LoadMovies();
                     list.Add(movie1);
                     var test = JsonConvert.SerializeObject(list, Formatting.Indented);
