@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "huzEJIWbt8BGSG7bmjT0spCp78QqbaJDdk2LffVLY8lgme1XR6RgCm/CsAQOlQR8u5gTfW9fwQqi66Q1CFktxA==",
+  "success": true,
+  "projectFilePath": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
