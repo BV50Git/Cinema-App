@@ -1,0 +1,11 @@
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.exe
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.deps.json
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.json
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.dev.json
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.pdb
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csprojAssemblyReference.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfoInputs.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfo.cs
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.pdb
