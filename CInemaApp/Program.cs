@@ -39,14 +39,39 @@ namespace CInemaApp
                 i = i + 1;
 
             }
+            Console.WriteLine(s);
+            Console.WriteLine("   ideal option 1");
+            c = "0";
+            s = "";
+            i = 1;
+            while (i < 9)
+            {
+                int j = 1;
+                while (j < 10)
+                {
+                    if (i == 1 | i == 8 | j == 1)
+                    {
+                        s = s + " *";
+                    }
+                    else
+                    {
+                        s = s + " ";
+
+                    }
+                    j = j + 1;
+                }
+                s = s + "\n";
+                i = i + 1;
+
+            }
+            Console.WriteLine(s);
+            Console.WriteLine(" credit card option 2");
             while (c != "4")
             {
-                Console.WriteLine(s);
-                Console.WriteLine("   ideal option 1");
                 c = Console.ReadLine();
                 if (c == "1")
                 {
-                    Console.WriteLine("please enter your information");
+                    Console.WriteLine("please enter your information\n *********************");
                     c = "4";
                 }
 
@@ -155,11 +180,10 @@ namespace CInemaApp
                         if (x == "3")
                         {
                             Console.WriteLine("here");
-                            Costumer testuser = new Costumer();
+                            Console.WriteLine (System.IO.File.ReadAllText(@"C:\Users\Acer\source\repos\json1.json"));
 
-                            testuser.Newarray = Globals.array;
-                            testuser.Shows_prices_by_age();
-                            testuser.array_movie_times_and_location = Globals.Newarray_movie_times_and_location;
+
+
                         }
                         if (x == "4")
                         {
