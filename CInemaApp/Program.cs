@@ -10,7 +10,7 @@ namespace CinemaApp
             int e = 0;
             int width = 0;
             int height = 0;
-            int movieHall = 2;
+            int movieHall = 1;
             int userRow = 0;
             int userColumn = 0;
             int userSeat = 0;
@@ -34,17 +34,29 @@ namespace CinemaApp
             int[] userSeats = new int[width * height];
             void showSeats()
             {
-                for (int i = 0; i < height; i++)
+                for (int i = -1; i < height; i++)
                 {
+                    Console.Write(i+1);
+                    if (i < 9) Console.Write(" ");
+                        
                     for (int o = 0; o < width; o++)
                     {
-                        if (userSeats.Contains(i * width + o + 1))
+                        if (i == -1)
                         {
-                            Console.Write("[ X ]");
+                            Console.Write("  " + (o + 1));
+                            if (o< 9) Console.Write(" ");
+                            Console.Write(" ");
                         }
                         else
                         {
-                            Console.Write("[ O ]");
+                            if (userSeats.Contains(i * width + o + 1))
+                            {
+                                Console.Write("[ X ]");
+                            }
+                            else
+                            {
+                                Console.Write("[ O ]");
+                            }
                         }
                     }
                     Console.WriteLine("\n");
