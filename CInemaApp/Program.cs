@@ -21,10 +21,10 @@ namespace CInemaApp
             int i = 1;
             while (i < 9)
             {
-                int j = 1;
-                while (j < 10)
+                int j = 0;
+                while (j <= 9)
                 {
-                    if (i == 1 | i == 8 | j == 1)
+                    if (i == 1 | i == 8 | j == 0)
                     {
                         s = s + " *";
                     }
@@ -46,10 +46,10 @@ namespace CInemaApp
             i = 1;
             while (i < 9)
             {
-                int j = 1;
-                while (j < 10)
+                int j = 0;
+                while (j <= 9)
                 {
-                    if (i == 1 | i == 8 | j == 1)
+                    if (i == 1 | i == 8 | j == 0)
                     {
                         s = s + " *";
                     }
@@ -62,7 +62,6 @@ namespace CInemaApp
                 }
                 s = s + "\n";
                 i = i + 1;
-
             }
             Console.WriteLine(s);
             Console.WriteLine(" credit card option 2");
@@ -71,12 +70,26 @@ namespace CInemaApp
                 c = Console.ReadLine();
                 if (c == "1")
                 {
-                    Console.WriteLine("please enter your information\n *********************");
+                    Console.WriteLine("please enter your Ideal information\n *********************");
+                    string information = Console.ReadLine();
+                    string x = "5";
+                    c = "4";
+                }
+                if (c == "2")
+                {
+                    Console.WriteLine("please enter your credit card information\n *********************");
+                    string information = Console.ReadLine();
+                    
                     c = "4";
                 }
 
+
             }
-            return s;
+            // shows final ticket and show the time and payment done.
+            string infopayed = " everything is payed ";
+            
+
+            return infopayed;
         }
         // administrator class so the administrator can use specific functions and add data needed in the application
         public class Administrator
@@ -149,7 +162,7 @@ namespace CInemaApp
                 {
                     // start the while loop
                     string x = "0";
-                    while (x != "5")
+                    while (x != "6")
                     {
                         x = Console.ReadLine();
                         if (x == "1")
@@ -189,6 +202,16 @@ namespace CInemaApp
                         {
                             Paymentsystem testuser = new Paymentsystem();
                             testuser.Paymentoption();
+                            //x = "5";
+                        }
+                        if (x == "5")
+                        {
+                            // does not jet place information in json file is for future ticket information
+                            //Console.WriteLine("here");
+                           // Paymentsystem testuser = new Paymentsystem();
+                            //string information = testuser.Paymentoption();
+                            //var stringjson = JsonConvert.SerializeObject(information, Formatting.Indented);
+                           // System.IO.File.AppendAllText(@"C:\Users\Acer\source\repos\json1.json", stringjson);
                         }
                     }
                 }
