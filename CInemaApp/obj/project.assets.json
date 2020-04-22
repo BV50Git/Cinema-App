@@ -9,6 +9,7 @@
   },
   "packageFolders": {
     "C:\\Users\\babyg\\.nuget\\packages\\": {}
+    "C:\\Users\\basvo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -21,6 +22,15 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\babyg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "projectName": "CInemaApp",
+      "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "packagesPath": "C:\\Users\\basvo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\basvo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -59,6 +69,7 @@
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
             "version": "[3.0.3, 3.0.3]"
+            "version": "[3.0.2, 3.0.2]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
@@ -75,6 +86,7 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
