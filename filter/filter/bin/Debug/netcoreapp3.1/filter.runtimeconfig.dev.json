@@ -1,8 +1,6 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\babyg\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\babyg\\.nuget\\packages"
       "C:\\Users\\basvo\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\basvo\\.nuget\\packages"
     ]
