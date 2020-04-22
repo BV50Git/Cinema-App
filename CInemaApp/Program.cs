@@ -1,5 +1,8 @@
 ﻿using System;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace CInemaApp
 
@@ -11,58 +14,61 @@ namespace CInemaApp
         public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
     }
 
+    public class Reading
+    {
+
+        public string name; // Name of the movie
+        public string description; // Description of the movie
+
+
+
+        // Constructor
+        public void Constrictor(string name, string description)
+        {
+
+            this.name = name;
+            this.description = description;
+        }
+    }
     public class Paymentsystem
     {
-        public string Paymentoption()
+        public void Paymentoption()
         {
             Console.WriteLine("please choose your payment option! (type the number of your choice to choose)");
             string c = "0";
             string s = "";
-            int i = 1;
-            while (i < 9)
+            int counter = 1;
+            int options = 2;
+            int i;
+            int j;
+            int height = 9;
+            int width = 9;
+            while (counter < options)
             {
-                int j = 0;
-                while (j <= 9)
+                for (i = 1; i <= height; i++)
                 {
-                    if (i == 1 | i == 8 | j == 0)
+                    for (j = 1; j <= width; j++)
                     {
-                        s = s + " *";
+                        if (i == 1 || i == height || j == 1 || j == width)
+                            s = s + " *";
+                        else
+                            s = s + "  ";
                     }
-                    else
-                    {
-                        s = s + " ";
-
-                    }
-                    j = j + 1;
+                    s = s + "\n";
                 }
-                s = s + "\n";
-                i = i + 1;
-
-            }
-            Console.WriteLine(s);
-            Console.WriteLine("   ideal option 1");
-            c = "0";
-            s = "";
-            i = 1;
-            while (i < 9)
-            {
-                int j = 0;
-                while (j <= 9)
+                if (counter == 1)
                 {
-                    if (i == 1 | i == 8 | j == 0)
-                    {
-                        s = s + " *";
-                    }
-                    else
-                    {
-                        s = s + " ";
-
-                    }
-                    j = j + 1;
+                    Console.WriteLine(s);
+                    Console.WriteLine("   ideal option 1");
                 }
-                s = s + "\n";
-                i = i + 1;
+                else if (counter == 2)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine(" credit card option 2");
+                }
+                counter = counter + 1;
             }
+          
             Console.WriteLine(s);
             Console.WriteLine(" credit card option 2");
             while (c != "4")
@@ -89,7 +95,7 @@ namespace CInemaApp
             string infopayed = " everything is payed ";
             
 
-            return infopayed;
+            
         }
         // administrator class so the administrator can use specific functions and add data needed in the application
         public class Administrator
@@ -164,6 +170,7 @@ namespace CInemaApp
                     string x = "0";
                     while (x != "6")
                     {
+                        Console.WriteLine("Please type your choice 1 to fill in information. 2 to write the new information to the json fil\n 3 to get information from the json file. 4 t go to the payment system and pay your ticket");
                         x = Console.ReadLine();
                         if (x == "1")
                         // option to create the arrays of information in final program only useable by administrato
@@ -177,7 +184,6 @@ namespace CInemaApp
                         if (x == "2")
                         // option to write information into the json file
                         {
-                            Console.WriteLine("here");
                             Costumer testuser = new Costumer();
 
                             testuser.Newarray = Globals.array;
@@ -193,7 +199,14 @@ namespace CInemaApp
                         if (x == "3")
                         {
                             Console.WriteLine("here");
-                            Console.WriteLine (System.IO.File.ReadAllText(@"C:\Users\Acer\source\repos\json1.json"));
+                            Console.WriteLine(System.IO.File.ReadAllText(@"C:\Users\Acer\source\repos\json1.json"));
+
+                            // future reading code to make sure it reads without the brackets
+                            //for (int d = 1; d < Dataprices.LoadPrices().Count + 1; d++)
+                            //{
+                            //    Console.WriteLine(x + ": " + Dataprices.LoadPrices()[d - 1].Getmovietime());
+                            //}
+                            
 
 
 
@@ -206,7 +219,7 @@ namespace CInemaApp
                         }
                         if (x == "5")
                         {
-                            // does not jet place information in json file is for future ticket information
+                            // does not yet place information in json file is for future ticket information
                             //Console.WriteLine("here");
                            // Paymentsystem testuser = new Paymentsystem();
                             //string information = testuser.Paymentoption();
