@@ -14,22 +14,6 @@ namespace CInemaApp
         public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
     }
 
-    public class Reading
-    {
-
-        public string name; // Name of the movie
-        public string description; // Description of the movie
-
-
-
-        // Constructor
-        public void Constrictor(string name, string description)
-        {
-
-            this.name = name;
-            this.description = description;
-        }
-    }
     public class Paymentsystem
     {
         public void Paymentoption()
