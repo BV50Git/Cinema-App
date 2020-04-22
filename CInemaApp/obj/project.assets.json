@@ -52,19 +52,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jeroe\\.nuget\\packages\\": {}
+    "C:\\Users\\Roomy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "projectUniqueName": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
       "projectName": "CInemaApp",
-      "projectPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
-      "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\obj\\",
+      "projectPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "packagesPath": "C:\\Users\\Roomy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Roomy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
