@@ -1,0 +1,12 @@
+{
+  "array_movie_times_and_location": [
+    "movie starts at 12:00 on 20-4-2020 location: Rotterdam, Wijnhaven 107."
+  ],
+  "Newarray": [
+    "below age 10 10.00 euro",
+    "age 10 to 15 12.50 euro",
+    "age 16 to 26 15.00 euro",
+    "age 27 to 50 12.50 euro",
+    "50+ 10.00 euro"
+  ]
+}
