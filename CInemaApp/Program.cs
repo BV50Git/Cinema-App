@@ -68,12 +68,10 @@ namespace CInemaApp
         }
         public static void Current()
         {
-            Console.WriteLine("Placeholder current");
             bb();
         }
         public static void Upcoming()
         {
-            Console.WriteLine("Placeholder upcoming");
             bb();
         }
         public static void Prices()
@@ -98,7 +96,6 @@ namespace CInemaApp
         }
         public static void Events()
         {
-            Console.WriteLine("Placeholder events");
             bb();
         }
         public static void Sally()
