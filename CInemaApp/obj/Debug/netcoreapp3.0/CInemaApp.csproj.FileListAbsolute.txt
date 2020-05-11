@@ -9,3 +9,5 @@ D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.Ass
 D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfo.cs
 D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.dll
 D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.pdb
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CoreCompileInputs.cache
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.genruntimeconfig.cache

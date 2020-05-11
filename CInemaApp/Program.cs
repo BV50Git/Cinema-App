@@ -1,11 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks.Dataflow;
 using System.Windows.Input;
 
 namespace CInemaApp
 {
+    //List<string> sublist = new List<string>();
     // the 'login screen' that asks whether the current user is an admin or not
     public class Login
     {
+        public static void Password()
+        {
+            Console.Write("Please enter the password: ");
+            string pass = Console.ReadLine();
+
+            if (pass == "Admin")
+                Admin.Menu();
+            else
+                Console.WriteLine("Wrong input. Please try again");
+            Password();
+        }
+
         public static void Question()
         {
             User.STARS();
@@ -17,7 +32,7 @@ namespace CInemaApp
             if (Answer.Equals("U", StringComparison.OrdinalIgnoreCase))
                 User.Menu();
             else if (Answer.Equals("A", StringComparison.OrdinalIgnoreCase))
-                Admin.Menu();
+                Password();
             else
                 Question();
                 //repeats the question if it isn't answered properly .-.
@@ -53,10 +68,12 @@ namespace CInemaApp
         }
         public static void Current()
         {
+            Console.WriteLine("Placeholder current");
             bb();
         }
         public static void Upcoming()
         {
+            Console.WriteLine("Placeholder upcoming");
             bb();
         }
         public static void Prices()
@@ -81,9 +98,14 @@ namespace CInemaApp
         }
         public static void Events()
         {
+            Console.WriteLine("Placeholder events");
             bb();
         }
         public static void Sally()
+        {
+            bb();
+        }
+        public static void Subscribe()
         {
             bb();
         }
@@ -124,7 +146,12 @@ namespace CInemaApp
                     Contact();
                     break;
                 case "7":
+                    STARS();
+                    Subscribe();
+                    break;
+                case "8":
                     Console.WriteLine("Goodbye.");
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("False input. Try again.");
@@ -142,7 +169,8 @@ namespace CInemaApp
             Console.WriteLine("[4] - Events");
             Console.WriteLine("[5] - Sally's Café");
             Console.WriteLine("[6] - Contact Information");
-            Console.WriteLine("[7] - Quit");
+            Console.WriteLine("[7] - Cinema Newsletter Subscription");
+            Console.WriteLine("[8] - Quit");
             STARS();
             Console.WriteLine("Please choose an option to continue.");
 
@@ -170,29 +198,42 @@ namespace CInemaApp
 
             Choices();
         }
+        public static void bb()
+        //works as a back button
+        {
+            Console.WriteLine("To go back to the main menu, please press Enter.");
+            string key = Console.ReadLine();
+
+            if (key == "" + "") //enter
+                Menu();
+            else
+                bb();
+
+        }
         public static void Current()
         {
             string tc = Console.ReadLine();
+            bb();
         }
         public static void Upcoming()
         {
             string tu = Console.ReadLine();
+            bb();
         }
         public static void Prices()
         {
             string tp = Console.ReadLine();
+            bb();
         }
         public static void Events()
         {
             string te = Console.ReadLine();
+            bb();
         }
         public static void Sally()
         {
             string ts = Console.ReadLine();
-        }
-        public static void Contact()
-        {
-            string tco = Console.ReadLine();
+            bb();
         }
         public static void Choices()
         {
@@ -214,10 +255,12 @@ namespace CInemaApp
                 case "5":
                     Sally();
                     break;
-                case "6":
-                    Contact();
+                case "7":
+                    Console.WriteLine("Goodbye.");
+                    Environment.Exit(0);
                     break;
                 default:
+                    Console.WriteLine("False input. Try again.");
                     Choices();
                     break;
             }
