@@ -60,14 +60,14 @@ namespace CInemaApp
                 c = Console.ReadLine();
                 if (c == "1")
                 {
-                    Console.WriteLine("please enter your Ideal information\n *********************");
+                    Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
                     string information = Console.ReadLine();
                     string x = "5";
                     c = "4";
                 }
                 if (c == "2")
                 {
-                    Console.WriteLine("please enter your credit card information\n *********************");
+                    Console.WriteLine("please enter your credit card information, 8 digit code\n *********************");
                     string information = Console.ReadLine();
                     
                     c = "4";
