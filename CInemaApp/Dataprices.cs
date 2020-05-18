@@ -5,9 +5,9 @@ using System.IO;
 using System.Reflection;
 
 
-/*public class Dataprices
- * used for future readability to remove brackets right now problems with array type conversion.
-{
+public static class Dataprices
+  //used for future readability to remove brackets right now problems with array type conversion.
+{/*
 	public static List<Constructor> LoadPrices()
 	{
         using (StreamReader r = new StreamReader(@"C:\Users\Acer\source\repos\json1.json"))
@@ -18,5 +18,5 @@ using System.Reflection;
 
         }
     }
-}
-*/
+*/}
+

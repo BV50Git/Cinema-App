@@ -5,7 +5,7 @@ namespace CinemaApp
 {   
     class program
     { 
-        static void Main(string[] args)
+        static void Seat(string[] args)
         {
             int e = 0;
             int width = 0;

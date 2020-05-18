@@ -6,6 +6,7 @@ using System.Reflection;
 
 public static class Data
 {
+    // the List Movie is the constructor in Movies.cs
     public static List<Movie> LoadMovies()
     {
         // Load the movieData.json here and parse to Movie objects
