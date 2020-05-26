@@ -11,6 +11,7 @@ namespace CInemaApp
     {
         public static string[] array;
         public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
+        public static string answer;
     }
 
     public class Paymentsystem
@@ -90,9 +91,9 @@ namespace CInemaApp
         // creates the price classes on the bases of age
         public string[] Age_prices_array()
         {
-            string[] agebrackets_in_cinema = { "below age 10", "age 10 to 15", "age 16 to 26", "age 27 to 50", "50+" };
-            string[] array = { "1", "2", "3", "4", "5" };
-            int agebrackets = 5;
+            string[] agebrackets_in_cinema = { "below age 12", "age 12 to 26", "age 27 to 50", "50+" };
+            string[] array = { "1", "2", "3", "4" };
+            int agebrackets = 4;
             for (int i = 0; i < agebrackets; i++)
             {
                 Console.WriteLine("The price for " + agebrackets_in_cinema[i] + " are?");
@@ -135,7 +136,6 @@ namespace CInemaApp
                 Console.WriteLine(Newarray[1]);
                 Console.WriteLine(Newarray[2]);
                 Console.WriteLine(Newarray[3]);
-                Console.WriteLine(Newarray[4]);
                 return Newarray;
             }
             public System.Collections.Generic.List<string> Show_times_and_dates()
@@ -154,6 +154,7 @@ namespace CInemaApp
             User.STARS();
             Console.WriteLine("Are you an Admin or User? [A/U]");
             string Answer = Console.ReadLine();
+            Globals.answer = Answer;
 
             //StringComparison.OrdinalIgnoreCase makes sure that the answer gets through despite it being upper or lower case
             //Answer.Equals is the same as Answer = "U"
@@ -206,7 +207,7 @@ namespace CInemaApp
             string x = "0";
             while (x != "6")
             {
-                Console.WriteLine("Please type your choice 1 to fill in information. 2 to write the new information to the json fil\n 3 to get information from the json file. 4 t go to the payment system and pay your ticket");
+                Console.WriteLine("Please type your choice 1 to fill in information. 2 to write the new information to the json fil\n 3 to get information from the json file. 4 t0 exit");
                 x = Console.ReadLine();
                 if (x == "1")
                 // option to create the arrays of information in final program only useable by administrato
@@ -243,7 +244,10 @@ namespace CInemaApp
                     //{
                     //    Console.WriteLine(x + ": " + Dataprices.LoadPrices()[d - 1].Getmovietime());
                     //}
-
+                    }
+                else if (x == "4")
+                {
+                    bb();
                 }
 
             }
@@ -364,55 +368,73 @@ namespace CInemaApp
         }
         public static void Prices()
         {
-            string x = "0";
-            while (x != "6")
+            if (Globals.answer == "A")
             {
-                Console.WriteLine("Please type your choice 1 to fill in information. 2 to write the new information to the json fil\n 3 to get information from the json file. 4 t go to the payment system and pay your ticket");
-                x = Console.ReadLine();
-                if (x == "1")
-                // option to create the arrays of information in final program only useable by administrato
+                string x = "0";
+                while (x != "6")
                 {
-                    Administrator testing = new Administrator();
-                    string[] array = testing.Age_prices_array();
-                    System.Collections.Generic.List<string> Newarray_movie_times_and_location = testing.Times_and_dates();
-                    Globals.Newarray_movie_times_and_location = Newarray_movie_times_and_location;
-                    Globals.array = array;
+                    Console.WriteLine("Please type your choice 1 to fill in information. 2 to write the new information to the json fil\n 3 to get information from the json file. 4 to go to exit");
+                    x = Console.ReadLine();
+                    if (x == "1")
+                    // option to create the arrays of information in final program only useable by administrato
+                    {
+                        Administrator testing = new Administrator();
+                        string[] array = testing.Age_prices_array();
+                        System.Collections.Generic.List<string> Newarray_movie_times_and_location = testing.Times_and_dates();
+                        Globals.Newarray_movie_times_and_location = Newarray_movie_times_and_location;
+                        Globals.array = array;
+                    }
+                    if (x == "2")
+                    // option to write information into the json file
+                    {
+                        Costumer testuser = new Costumer();
+
+                        testuser.Newarray = Globals.array;
+
+                        testuser.array_movie_times_and_location = Globals.Newarray_movie_times_and_location;
+                        var stringjson = JsonConvert.SerializeObject(testuser, Formatting.Indented);
+
+
+                        System.IO.File.WriteAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json", stringjson);
+                    }
+                    // needs t read from json file to print the information the user needs to see/ known problems does not print the times and date information
+                    // still is unable to read from the json file
+                    if (x == "3")
+                    {
+                        Console.WriteLine("here");
+                        Console.WriteLine(System.IO.File.ReadAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json"));
+                    }
+                    else if (x == "4") {
+                        bb();
+                    }
                 }
-                if (x == "2")
-                // option to write information into the json file
-                {
-                    Costumer testuser = new Costumer();
-
-                    testuser.Newarray = Globals.array;
-
-                    testuser.array_movie_times_and_location = Globals.Newarray_movie_times_and_location;
-                    var stringjson = JsonConvert.SerializeObject(testuser, Formatting.Indented);
-
-
-                    System.IO.File.WriteAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json", stringjson);
-                }
-                // needs t read from json file to print the information the user needs to see/ known problems does not print the times and date information
-                // still is unable to read from the json file
-                if (x == "3")
-                {
-                    Console.WriteLine("here");
-                    Console.WriteLine(System.IO.File.ReadAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json"));
-                   
-
-                    // future reading code to make sure it reads without the brackets
-                    //for (int d = 1; d < Dataprices.LoadPrices().Count + 1; d++)
-                    //{
-                    //    Console.WriteLine(x + ": " + Dataprices.LoadPrices()[d - 1].Getmovietime());
-                    //}
-
-
-
-
-                }
-               
             }
+            else
+            {
+                string x = "0";
+                while (x != "6")
+                {
+                    Console.WriteLine("Please type your choice 1 to get the information you want in information.\n type 2 to exit. ");
+                    x = Console.ReadLine();
+                    if (x == "1")
+                    {
+                        Console.WriteLine("here");
+                        Console.WriteLine(System.IO.File.ReadAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json"));
 
-            bb();
+
+                        // future reading code to make sure it reads without the brackets
+                        //for (int d = 1; d < Dataprices.LoadPrices().Count + 1; d++)
+                        //{
+                        //    Console.WriteLine(x + ": " + Dataprices.LoadPrices()[d - 1].Getmovietime());
+                        //}
+                    }
+                    else if (x == "2")
+                    {
+
+                        bb();
+                    }
+                }
+            }
         }
         public static void Events()
         {
