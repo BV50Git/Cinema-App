@@ -406,6 +406,7 @@ namespace CInemaApp
                     }
                     else if (x == "4") {
                         bb();
+                        x = "6";
                     }
                 }
             }
@@ -432,6 +433,7 @@ namespace CInemaApp
                     {
 
                         bb();
+                        x = "6";
                     }
                 }
             }
