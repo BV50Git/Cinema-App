@@ -149,6 +149,17 @@ namespace CInemaApp
 
     public class Login
     {
+        public static void Password()
+        {
+            Console.Write("Please enter the password: ");
+            string pass = Console.ReadLine();
+
+            if (pass == "Admin")
+                Admin.Menu();
+            else
+                Console.WriteLine("Wrong input. Please try again");
+            Password();
+        }
         public static void Question()
         {
             User.STARS();
@@ -160,7 +171,7 @@ namespace CInemaApp
             if (Answer.Equals("U", StringComparison.OrdinalIgnoreCase))
                 User.Menu();
             else if (Answer.Equals("A", StringComparison.OrdinalIgnoreCase))
-                Admin.Menu();
+                Password();
             else
                 Question();
             //repeats the question if it isn't answered properly .-.
@@ -195,6 +206,11 @@ namespace CInemaApp
         }
         public static void Current()
         {
+            Console.WriteLine("Welcome to the current movies page!");
+            for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+            {
+                Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
+            }
             bb();
         }
         public static void Upcoming()
@@ -252,6 +268,9 @@ namespace CInemaApp
         }
         public static void Events()
         {
+            Console.WriteLine("Friday horror night all horror movies are 50% off");
+            Console.WriteLine("Saturday Familiy day every familiy that comes gain tickets for free food");
+            Console.WriteLine("Sunday premire night every sunday night one or more of the upcoming movies will play for the first time");
             bb();
         }
         public static void Sally()
@@ -268,11 +287,6 @@ namespace CInemaApp
             {
                 case "1":
                     STARS();
-                    Console.WriteLine("Welcome to the current movies page!");
-                    for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
-                    {
-                        Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
-                    }
                     Current();
                     break; // <<<<< needed because switch cases REFUSE to work if the breaks are left out
                 case "2":
@@ -356,6 +370,11 @@ namespace CInemaApp
         }
         public static void Current()
         {
+            Console.WriteLine("Welcome to the current movies page!");
+            for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+            {
+                Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
+            }
             bb();
         }
         public static void Upcoming()
@@ -417,6 +436,9 @@ namespace CInemaApp
         }
         public static void Events()
         {
+            Console.WriteLine("Friday horror night all horror movies are 50% off");
+            Console.WriteLine("Saturday Familiy day every familiy that comes gain tickets for free food");
+            Console.WriteLine("Sunday premire night every sunday night one or more of the upcoming movies will play for the first time");
             bb();
         }
         public static void Sally()
@@ -427,6 +449,19 @@ namespace CInemaApp
         {
             Console.WriteLine("Name of the movie: ");
             string filmname = Console.ReadLine();
+            
+            
+            //goes through the whole json file
+            for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+            {
+                // removes a movie if it found a name with the same input
+                if (filmname == Data.LoadMovies()[x - 1].GetMovieName())
+                {
+                    Console.WriteLine("there is already a movie named that");
+                    bb();
+                }
+
+            }
             Console.WriteLine("Description of the movie: ");
             string description = Console.ReadLine();
             Console.WriteLine("Duration of the movie: ");
@@ -482,11 +517,6 @@ namespace CInemaApp
             {
                 case "1":
                     STARS();
-                    Console.WriteLine("Welcome to the current movies page!");
-                    for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
-                    {
-                        Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
-                    }
                     Current();
                     break; // <<<<< needed because switch cases REFUSE to work if the breaks are left out
                 case "2":
