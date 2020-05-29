@@ -409,10 +409,11 @@ namespace CInemaApp
 
 
                 }
-               
+                bb();
+
             }
 
-            bb();
+            
         }
         public static void Events()
         {
