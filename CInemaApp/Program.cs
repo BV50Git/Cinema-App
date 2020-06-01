@@ -422,7 +422,121 @@ namespace CInemaApp
         }
         public static void Sally()
         {
+            Console.WriteLine("Welcome to Sally's Cafe. What can I help you with today?");
+            Console.WriteLine("1) Display Food & Drink menu");
+            Console.WriteLine("2) Display payment options");
+            Console.WriteLine("3) Order from Food & Drink menu");
+            Console.WriteLine("4) Exit\n");
+            Console.Write("Please select your option. You can only choose 1, 2, 3 or 4 \n");
+
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    FoodDrinkMenu();
+                    break;
+                case "2":
+                    PaymentOption();
+                    break;
+                case "3":
+                    OrderMenu();
+                    break;
+                case "4":
+                    Exit();
+                    break;
+
+            }
+
+        }
+
+        public static void FoodDrinkMenu()
+        {
+            Console.WriteLine("This is the Drink & Food menu\n");
+            Console.WriteLine("Water : $2");
+            Console.WriteLine("Tea : $2");
+            Console.WriteLine("Coffee : $2");
+            Console.WriteLine("Slushie : $3");
+            Console.WriteLine("Milkshakes : $4");
+            Console.WriteLine("Soda : $3");
+            Console.WriteLine("Beer : $3");
+            Console.WriteLine("Wine : $5\n");
+
+            Console.WriteLine("Small Popcorn : $3");
+            Console.WriteLine("Medium Popcorn : $5");
+            Console.WriteLine("Big Popcorn : $7");
+            Console.WriteLine("Nachos & Dip : $5");
+            Console.WriteLine("Cotton Candy : $3");
+            Console.WriteLine("Big Cotton Candy : $5");
+            Console.WriteLine("Small Ben & Jerry's : $3");
+            Console.WriteLine("Big Ben & Jerry's : $5");
+            Console.WriteLine("Dunkin Donuts set of 3: $6");
+            Console.WriteLine("Dunkin Donuts set of 6: $10");
+            Console.WriteLine("Cupcake : $2\n");
+
+            Console.WriteLine("Press Enter to order\n");
+            Console.ReadLine();
+            OrderMenu();
+
+
+        }
+
+        public static void PaymentOption()
+        {
+            Console.WriteLine("These are the following payment options\n");
+            Console.WriteLine("1) IDEAL");
+            Console.WriteLine("2) Creditcard");
+
+        }
+
+        public static void OrderMenu()
+        {
+
+            List<string> MenuItems = new List<string>();
+            MenuItems.Add("Water");
+            MenuItems.Add("Tea");
+            MenuItems.Add("Coffee");
+            MenuItems.Add("Slushie");
+            MenuItems.Add("Milkshakes");
+            MenuItems.Add("Soda");
+            MenuItems.Add("Beer");
+            MenuItems.Add("Wine\n");
+            MenuItems.Add("Small Popcorn");
+            MenuItems.Add("Medium Popcorn");
+            MenuItems.Add("Big Popcorn");
+            MenuItems.Add("Nachos & Dip");
+            MenuItems.Add("Cotton Candy");
+            MenuItems.Add("Big Cotton Candy");
+            MenuItems.Add("Small Ben & Jerry's");
+            MenuItems.Add("Big Ben & Jerry's");
+            MenuItems.Add("Dunkin Donuts set of 3");
+            MenuItems.Add("Dunkin Donuts set of 6");
+            MenuItems.Add("Cupcake\n");
+
+
+            Console.WriteLine("Menu\n");
+            foreach (string message2 in MenuItems)
+                Console.WriteLine(message2);
+
+            Console.WriteLine("What would you like to Order?\n");
+            string message = Console.ReadLine();
+            Console.WriteLine("Your choice is: \n");
+            Console.WriteLine(message);
+
+        }
+
+        public static void Exit()
+        {
+            Console.WriteLine("Thank you for visiting Sally's cafe");
             bb();
+        }
+
+        public static string Read()
+        {
+            Console.WriteLine("Enter your selection please: \n");
+            return Console.ReadLine();
+        }
+
+        
         }
         public static void addMovie()
         {
