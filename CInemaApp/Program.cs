@@ -362,6 +362,17 @@ namespace CInemaApp
         }
         public static void Upcoming()
         {
+            Console.WriteLine("These are the upcoming movies: ");
+            List<string> Movies = new List<string>();
+            Movies.Add("Bad Boys for Life from 2020");
+            Movies.Add("The Godfather from 1974");
+            Movies.Add("1917 from 2020");
+            Movies.Add("Guardians of the Galaxy from 2014");
+            Movies.Add("Joker from 2019");
+
+            foreach (var movie in Movies)
+
+                Console.WriteLine(Movies);
             bb();
         }
         public static void Prices()
@@ -519,8 +530,22 @@ namespace CInemaApp
 
             Console.WriteLine("What would you like to Order?\n");
             string message = Console.ReadLine();
-            Console.WriteLine("Your choice is: \n");
-            Console.WriteLine(message);
+            Console.WriteLine("Your choice is: " + message);
+
+
+            if (true == (MenuItems.Contains(message)))
+                Console.WriteLine("You have succesfully ordered " + message);
+
+            else
+                Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
+            string messages = Console.ReadLine();
+
+            if (true == (MenuItems.Contains(messages)))
+                Console.WriteLine("You have succesfully ordered " + messages);
+
+            else
+                Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
+
 
         }
 
