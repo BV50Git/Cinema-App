@@ -16,6 +16,8 @@ namespace CInemaApp
 
             if (pass == "Admin")
                 Admin.Menu();
+            else if (pass == "exit")
+                Environment.Exit(0); //easter egg
             else
                 Console.WriteLine("Wrong input. Please try again");
             Password();
