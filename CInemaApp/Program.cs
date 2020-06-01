@@ -18,7 +18,7 @@ namespace CInemaApp
     {
         public void Paymentoption()
         {
-            Console.WriteLine("please choose your payment option! (type the number of your choice to choose)");
+            Console.WriteLine("Please choose your payment option! (press a number to choose)");
             string c = "0";
             string s = "";
             int counter = 1;
@@ -43,31 +43,33 @@ namespace CInemaApp
                 if (counter == 1)
                 {
                     Console.WriteLine(s);
-                    Console.WriteLine("   ideal option 1");
+                    Console.WriteLine("   IDEAL option 1");
                 }
                 else if (counter == 2)
                 {
                     Console.WriteLine(s);
-                    Console.WriteLine(" credit card option 2");
+                    Console.WriteLine(" Credit Card option 2");
                 }
                 counter = counter + 1;
             }
 
             Console.WriteLine(s);
-            Console.WriteLine(" credit card option 2");
+            Console.WriteLine(" Credit Card option 2");
             while (c != "4")
             {
                 c = Console.ReadLine();
                 if (c == "1")
                 {
-                    Console.WriteLine("please enter your Ideal information\n *********************");
+                    Console.WriteLine("Please enter your IDEAL information");
+                    User.STARS();
                     string information = Console.ReadLine();
                     string x = "5";
                     c = "4";
                 }
                 if (c == "2")
                 {
-                    Console.WriteLine("please enter your credit card information\n *********************");
+                    Console.WriteLine("Please enter your Credit Card information");
+                    User.STARS();
                     string information = Console.ReadLine();
 
                     c = "4";
@@ -76,7 +78,7 @@ namespace CInemaApp
 
             }
             // shows final ticket and show the time and payment done.
-            string infopayed = " everything is payed ";
+            string infopayed = " Payment completed";
 
 
 
@@ -91,12 +93,12 @@ namespace CInemaApp
         // creates the price classes on the bases of age
         public string[] Age_prices_array()
         {
-            string[] agebrackets_in_cinema = { "below age 12", "age 12 to 26", "age 27 to 50", "50+" };
+            string[] agebrackets_in_cinema = { "Below age 12", "Age 12 to 26", "Age 27 to 50", "50+" };
             string[] array = { "1", "2", "3", "4" };
             int agebrackets = 4;
             for (int i = 0; i < agebrackets; i++)
             {
-                Console.WriteLine("The price for " + agebrackets_in_cinema[i] + " are?");
+                Console.WriteLine("The price for " + agebrackets_in_cinema[i] + " is?");
                 string agebracket_and_price = Console.ReadLine();
                 array[i] = agebrackets_in_cinema[i] + " " + agebracket_and_price;
             }
@@ -107,14 +109,14 @@ namespace CInemaApp
         }
         public System.Collections.Generic.List<string> Times_and_dates()
         {
-            string location = "location: Rotterdam, Wijnhaven 107.";
+            string location = "Location: Rotterdam, Wijnhaven 107.";
             var array_movie_times_and_location = new System.Collections.Generic.List<string>() { };
 
-            Console.WriteLine("At what time does the movie play!");
+            Console.WriteLine("At what time does the movie play?");
             string time = Console.ReadLine();
-            Console.WriteLine("At which date does the movie play!");
+            Console.WriteLine("At which date does the movie play?");
             string date = Console.ReadLine();
-            string newdata = "movie starts at " + time + " on " + date + " " + location;
+            string newdata = "Movie starts at " + time + " on " + date + " at " + location;
             array_movie_times_and_location.Add(newdata);
             Console.WriteLine(array_movie_times_and_location[0]);
 
@@ -224,7 +226,7 @@ namespace CInemaApp
             string x = "0";
             while (x != "6")
             {
-                Console.WriteLine("Please type your choice 1 to fill in information. 2 to write the new information to the json fil\n 3 to get information from the json file. 4 t0 exit");
+                Console.WriteLine("Please press 1 to fill in information\n2 to write the new information to the json file\n3 to get information from the json file\n4 to exit");
                 x = Console.ReadLine();
                 if (x == "1")
                 // option to create the arrays of information in final program only useable by administrato
@@ -430,7 +432,7 @@ namespace CInemaApp
                 string x = "0";
                 while (x != "6")
                 {
-                    Console.WriteLine("Please type your choice 1 to get the information you want in information.\n type 2 to exit. ");
+                    Console.WriteLine("Please press 1 to go to the information page\nPress 2 to exit ");
                     x = Console.ReadLine();
                     if (x == "1")
                     {
@@ -459,8 +461,8 @@ namespace CInemaApp
         public static void Events()
         {
             Console.WriteLine("Friday horror night all horror movies are 50% off");
-            Console.WriteLine("Saturday Familiy day every familiy that comes gain tickets for free food");
-            Console.WriteLine("Sunday premire night every sunday night one or more of the upcoming movies will play for the first time");
+            Console.WriteLine("Saturday Family day every family that comes gain tickets for free food");
+            Console.WriteLine("Sunday premiere night every Sunday night one or more of the upcoming movies will play for the first time");
             bb();
         }
         public static void Sally()
@@ -479,16 +481,16 @@ namespace CInemaApp
                 // removes a movie if it found a name with the same input
                 if (filmname == Data.LoadMovies()[x - 1].GetMovieName())
                 {
-                    Console.WriteLine("there is already a movie named that");
+                    Console.WriteLine("A movie with that name already exists");
                     bb();
                 }
 
             }
-            Console.WriteLine("Description of the movie: ");
+            Console.WriteLine("Movie description: ");
             string description = Console.ReadLine();
-            Console.WriteLine("Duration of the movie: ");
+            Console.WriteLine("Movie length: ");
             int duration = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Genre of the movie: ");
+            Console.WriteLine("Movie genre: ");
             string genre = Console.ReadLine();
             Movie movie1 = new Movie(filmname, description, duration, genre); // new object
             List<Movie> list = Data.LoadMovies();
@@ -506,7 +508,7 @@ namespace CInemaApp
                 Console.WriteLine(x + " " + Data.LoadMovies()[x - 1].GetMovieName());
 
             }
-            Console.WriteLine("type the name of the movie that you want to remove: ");
+            Console.WriteLine("Enter the name of the movie you want to remove: ");
             string r = Console.ReadLine();
             bool found = false;
             //goes through the whole json file
@@ -522,7 +524,7 @@ namespace CInemaApp
             }
             if (found == false)
             {
-                Console.WriteLine("the movie is not found");
+                Console.WriteLine("Movie not found");
             }
             // sends the data back to the json file
             var test = JsonConvert.SerializeObject(list, Formatting.Indented);
@@ -573,7 +575,7 @@ namespace CInemaApp
                 case "9":
                     Console.WriteLine("Goodbye.");
                     break;
-                default:
+                default: // <<<<<works as the final 'else'
                     Console.WriteLine("False input. Try again.");
                     Choices();
                     break;
