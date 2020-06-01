@@ -301,6 +301,7 @@ namespace CInemaApp
                     break;
                 case "7":
                     Console.WriteLine("Goodbye.");
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("False input. Try again.");
@@ -528,6 +529,7 @@ namespace CInemaApp
                     break;
                 case "9":
                     Console.WriteLine("Goodbye.");
+                    Environment.Exit(0);
                     break;
                 default: // <<<<<works as the final 'else'
                     Console.WriteLine("False input. Try again.");
