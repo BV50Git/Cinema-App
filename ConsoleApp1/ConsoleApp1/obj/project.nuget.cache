@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VpZmDFsrv9pIkrGDsRSBvrXUVxPqDW6vrXJpCu4QXIDkUrjUU1wdCVGaqIGlSUGXEui0zEldSjtQ4eXRcAcA5Q==",
+  "dgSpecHash": "ERgqAqjx02AYBO9AspK6nmAoTnIY7DZWCnN8mujtofmrjeqF623aS0uS3ZcZJNhE0ut6qDJdx4goEuUXfbAiFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Roomy\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

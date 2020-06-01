@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< Updated upstream
       "C:\\Users\\Acer\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Acer\\.nuget\\packages"
+=======
+      "C:\\Users\\Roomy\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Roomy\\.nuget\\packages"
+>>>>>>> Stashed changes
     ]
   }
 }
