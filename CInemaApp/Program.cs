@@ -386,6 +386,12 @@ namespace CInemaApp
             else
                 Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
         }
+            public static void Exit()
+            {
+                Console.WriteLine("Thank you for visiting Sally's cafe");
+                bb();
+            }
+        
 
         public static void Choices()
         {
@@ -648,7 +654,7 @@ namespace CInemaApp
             MenuItems.Add("Big Ben & Jerry's");
             MenuItems.Add("Dunkin Donuts set of 3");
             MenuItems.Add("Dunkin Donuts set of 6");
-            MenuItems.Add("Cupcake\n");
+            MenuItems.Add("Cupcake \n");
 
 
             Console.WriteLine("Menu\n");
