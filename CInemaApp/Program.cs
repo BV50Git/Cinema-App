@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 
 namespace CInemaApp
@@ -382,9 +383,11 @@ namespace CInemaApp
 
             if (true == (MenuItems.Contains(messages)))
                 Console.WriteLine("You have succesfully ordered " + messages);
+                
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
+                
         }
         public static void Exit()
         {
@@ -392,7 +395,66 @@ namespace CInemaApp
             bb();
         }
 
+        public static void Subscription()
+        {
+            Console.WriteLine("Welcome to the subscriptions page!");
+            Console.WriteLine("Press 'S' to subscribe,\n'I' for more information,\n'Enter' to go back to the main menu");
+            var sub = Console.ReadLine();
 
+            if (sub.Equals("S", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Thank you for choosing to subscribe to the Cinemapps newsletter! Please enter the following information:");
+                Console.Write("First name: ");
+                var fname = Console.ReadLine();
+                Console.Write("Surname: ");
+                var sname = Console.ReadLine();
+                Console.Write("Age: ");
+                var age = Console.ReadLine();
+                Console.Write("Email: ");
+                var mail = Console.ReadLine();
+
+                var every = fname + " " + sname + ", " + age + ", " + mail;
+
+                //Write to json file
+                string file = JsonConvert.SerializeObject(every, Formatting.Indented);
+                File.AppendAllText("subscriptions.json", file);
+                Console.WriteLine("You have been subscribed!");
+                bb();
+            }
+
+
+            else if (sub.Equals("I", StringComparison.OrdinalIgnoreCase))
+            {
+                STARS();
+                Console.WriteLine("If you subscribe to Cinemapps, you will receive a monthly news letter by email!");
+                Console.WriteLine("It will include information about upcoming movies, events, and eventual discounts, as well as any other news surrounding our beloved cinema!");
+                Console.WriteLine("Press any key to go back to the subscription page");
+                var back = Console.ReadLine();
+
+                if (back == "A")
+                {
+                    STARS();
+                    Subscription();
+                }
+
+                else
+                {
+                    STARS();
+                    Subscription();
+                }
+            }
+
+            else if (sub == "" + "")
+            {
+                Menu();
+            }
+            else
+            {
+                Console.WriteLine("False input. Try again");
+                STARS();
+                Subscription();
+            }
+        }
         public static void Choices()
         {
             string choice = Console.ReadLine();
@@ -428,6 +490,10 @@ namespace CInemaApp
                     Contact();
                     break;
                 case "7":
+                    STARS();
+                    Subscription();
+                    break;
+                case "8":
                     Console.WriteLine("Goodbye.");
                     Environment.Exit(0);
                     break;
@@ -447,7 +513,8 @@ namespace CInemaApp
             Console.WriteLine("[4] - Events");
             Console.WriteLine("[5] - Sally's Café");
             Console.WriteLine("[6] - Contact Information");
-            Console.WriteLine("[7] - Quit");
+            Console.WriteLine("[7] - Subscription");
+            Console.WriteLine("[8] - Quit");
             STARS();
             Console.WriteLine("Please choose an option to continue.");
 
@@ -497,11 +564,11 @@ namespace CInemaApp
         {
             Console.WriteLine("These are the upcoming movies: ");
             List<string> Movies = new List<string>();
-            Movies.Add("Bad Boys for Life from 2020");
-            Movies.Add("The Godfather from 1974");
-            Movies.Add("1917 from 2020");
-            Movies.Add("Guardians of the Galaxy from 2014");
-            Movies.Add("Joker from 2019");
+            Movies.Add("Bad Boys for Life (2020)");
+            Movies.Add("The Godfather (1974)");
+            Movies.Add("1917 (2020)");
+            Movies.Add("Guardians of the Galaxy (2014)");
+            Movies.Add("Joker (2019)");
 
             foreach (var movie in Movies)
 
@@ -798,7 +865,9 @@ namespace CInemaApp
                 case "8":
                     removeMovie();
                     break;
-                case "9":
+                //case "9":
+                    //break;
+                case "10":
                     Console.WriteLine("Goodbye.");
                     Environment.Exit(0);
                     break;
@@ -820,7 +889,8 @@ namespace CInemaApp
             Console.WriteLine("[6] - Contact Information");
             Console.WriteLine("[7] - Add Movie");
             Console.WriteLine("[8] - Remove movie");
-            Console.WriteLine("[9] - Quit");
+            Console.WriteLine("[9] - See Subscriptions");
+            Console.WriteLine("[10] - Quit");
             STARS();
             Console.WriteLine("Please choose an option to continue.");
 
