@@ -458,7 +458,7 @@ namespace CInemaApp
                     OrderMenu();
                     break;
                 case "4":
-                    Exit();
+                    Admin.bb();
                     break;
 
             }
