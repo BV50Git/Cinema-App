@@ -561,8 +561,6 @@ namespace CInemaApp
             return Console.ReadLine();
         }
 
-        
-        }
         public static void addMovie()
         {
             Console.WriteLine("Name of the movie: ");
