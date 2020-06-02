@@ -2,7 +2,11 @@
   "version": 3,
   "targets": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ".NETCoreApp,Version=v3.0": {
+=======
+    ".NETCoreApp,Version=v3.1": {
+>>>>>>> Stashed changes
 =======
     ".NETCoreApp,Version=v3.1": {
 >>>>>>> Stashed changes
@@ -52,7 +56,11 @@
   },
   "projectFileDependencyGroups": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ".NETCoreApp,Version=v3.0": [
+=======
+    ".NETCoreApp,Version=v3.1": [
+>>>>>>> Stashed changes
 =======
     ".NETCoreApp,Version=v3.1": [
 >>>>>>> Stashed changes
@@ -61,14 +69,18 @@
   },
   "packageFolders": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "C:\\Users\\Roomy\\.nuget\\packages\\": {}
 =======
+=======
+>>>>>>> Stashed changes
     "C:\\Users\\basvo\\.nuget\\packages\\": {}
 >>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
       "projectName": "CInemaApp",
@@ -79,6 +91,8 @@
       "configFilePaths": [
         "C:\\Users\\Roomy\\AppData\\Roaming\\NuGet\\NuGet.Config",
 =======
+=======
+>>>>>>> Stashed changes
       "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj",
       "projectName": "filter",
       "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj",
@@ -110,7 +124,11 @@
     },
     "frameworks": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "netcoreapp3.0": {
+=======
+      "netcoreapp3.1": {
+>>>>>>> Stashed changes
 =======
       "netcoreapp3.1": {
 >>>>>>> Stashed changes
@@ -131,6 +149,7 @@
         "assetTargetFallback": true,
         "warn": true,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
@@ -149,6 +168,8 @@
             "version": "[3.0.0, 3.0.0]"
           }
         ],
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         "frameworkReferences": {
