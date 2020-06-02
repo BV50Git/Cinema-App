@@ -25,8 +25,8 @@ public class Movie
     {
         return this.name;
     }
-<<<<<<< Updated upstream
-=======
+
+
     public string GetMovieGenre()
     {
         return this.genre;
@@ -36,7 +36,7 @@ public class Movie
     {
         return this.duration;
     }
->>>>>>> Stashed changes
+
 
 
 
