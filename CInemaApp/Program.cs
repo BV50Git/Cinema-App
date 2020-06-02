@@ -470,7 +470,7 @@ namespace CInemaApp
             Console.WriteLine("Milkshakes : $4");
             Console.WriteLine("Soda : $3");
             Console.WriteLine("Beer : $3");
-            Console.WriteLine("Wine : $5\n");
+            Console.WriteLine("Wine : $6\n");
 
             Console.WriteLine("Small Popcorn : $3");
             Console.WriteLine("Medium Popcorn : $5");
