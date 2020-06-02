@@ -375,6 +375,11 @@ namespace CInemaApp
         }
         public static void Current()
         {
+            Console.WriteLine("Welcome to the current movies page!");
+            for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+            {
+                Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
+            }
             bb();
         }
         public static void Upcoming()
@@ -606,13 +611,14 @@ namespace CInemaApp
         {
 
             /*Console.ForegroundColor = ConsoleColor.White;
-            Console.BackgroundColor = ConsoleColor.Cyan;
+           
             foreach (ConsoleColor color in Enum.GetValues(typeof(ConsoleColor)))
             {
                 Console.BackgroundColor = color;
                 Console.WriteLine($"Background color set to {color}");
             }*/
-
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.Clear();
                 Login.Question();
         }
     }
