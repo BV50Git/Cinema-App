@@ -6,6 +6,15 @@
     "genre": null
   },
   {
+<<<<<<< Updated upstream
+=======
+    "name": "lord of the rings",
+    "description": "hooi",
+    "duration": 10,
+    "genre": null
+  },
+  {
+>>>>>>> Stashed changes
     "name": "star wars",
     "description": "hooi",
     "duration": 10,
