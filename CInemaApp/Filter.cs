@@ -4,12 +4,12 @@ using Newtonsoft.Json;
 
 
 
-namespace filter
+namespace CinemaApp
 {
 
-    class Program
+    class filter
     {
-        static void Main(string[] args)
+        public static void start()
         {
             string tag1 = "emptyTag";
             string tag2 = "emptyTag";

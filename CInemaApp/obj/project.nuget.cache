@@ -1,26 +1,21 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "mQVDRFqVdnpfLtG8b3FfYSW3a1+rDeUEbFakn7eJdFc+GjUENz1dz8+VEidpV4sBXd7CHV6umPSJpNnA+RhM9A==",
-=======
-  "dgSpecHash": "ZilQys5F29ODVfrq3mD5hOpRMEivOumYW5GYrqC71txupEhsruiPHi/cXLPeMSSDUqDBJz/pDo7ZU6PcUKRrDw==",
->>>>>>> Stashed changes
+  "dgSpecHash": "dN/NP0WEf5XjJWJiYM7i0bWD/f/lMLXh6PbWTEnkdFe2UcKrVt00c38zDb6P2gTOvqBHM+4r2ps/nTA/91B+SA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+  "projectFilePath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
   "expectedPackageFiles": [
-<<<<<<< Updated upstream
-    "C:\\Users\\babyg\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
-    "C:\\Users\\babyg\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
-=======
-    "C:\\Users\\Roomy\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Roomy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "C:\\Users\\Roomy\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
-    "C:\\Users\\Roomy\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
-    "C:\\Users\\Roomy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
->>>>>>> Stashed changes
+    "C:\\Users\\basvo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\basvo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\basvo\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\basvo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\basvo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

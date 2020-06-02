@@ -52,19 +52,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jeroe\\.nuget\\packages\\": {}
+    "C:\\Users\\basvo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
       "projectName": "CInemaApp",
-      "projectPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
-      "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\obj\\",
+      "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "packagesPath": "C:\\Users\\basvo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\basvo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -110,7 +110,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.0.2, 3.0.2]"
+            "version": "[3.0.3, 3.0.3]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
@@ -126,8 +126,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

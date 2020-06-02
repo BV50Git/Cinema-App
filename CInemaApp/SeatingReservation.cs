@@ -1,11 +1,12 @@
-﻿using System;
+﻿using CInemaApp;
+using System;
 using System.Linq;
 
 namespace CinemaApp
 {   
-    class program
+    class seatingReservation
     { 
-        static void Main2(string[] args)
+        public static void Seat()
         {
             int e = 0;
             int width = 0;
@@ -89,9 +90,8 @@ namespace CinemaApp
 
     
             }
-            
+            Admin.bb();
         }
     }
 
 }
-
