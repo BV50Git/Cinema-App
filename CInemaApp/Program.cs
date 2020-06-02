@@ -559,7 +559,7 @@ namespace CInemaApp
         }
         public static void Events()
         {
-            Console.WriteLine("Friday horror night all horror movies are 50% off");
+            Console.WriteLine("Friday horror night all horror movies are 50% off TEEESSSSTTTTTTT");
             Console.WriteLine("Saturday Family day every family that comes gain tickets for free food");
             Console.WriteLine("Sunday premiere night every Sunday night one or more of the upcoming movies will play for the first time");
             bb();
