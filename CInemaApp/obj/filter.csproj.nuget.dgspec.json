@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\filter\\filter\\filter.csproj": {}
+    "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\filter\\filter\\filter.csproj": {
+    "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\filter\\filter\\filter.csproj",
+        "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj",
         "projectName": "filter",
-        "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\filter\\filter\\filter.csproj",
+        "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj",
         "packagesPath": "C:\\Users\\basvo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\filter\\filter\\obj\\",
+        "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\basvo\\AppData\\Roaming\\NuGet\\NuGet.Config",
