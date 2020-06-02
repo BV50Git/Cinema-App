@@ -1,7 +1,15 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ".NETCoreApp,Version=v3.0": {
+=======
+    ".NETCoreApp,Version=v3.1": {
+>>>>>>> Stashed changes
+=======
+    ".NETCoreApp,Version=v3.1": {
+>>>>>>> Stashed changes
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -47,16 +55,36 @@
     }
   },
   "projectFileDependencyGroups": {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     ".NETCoreApp,Version=v3.0": [
+=======
+    ".NETCoreApp,Version=v3.1": [
+>>>>>>> Stashed changes
+=======
+    ".NETCoreApp,Version=v3.1": [
+>>>>>>> Stashed changes
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\babyg\\.nuget\\packages\\": {}
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+    "C:\\Users\\Roomy\\.nuget\\packages\\": {}
+=======
+=======
+>>>>>>> Stashed changes
+    "C:\\Users\\basvo\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
+>>>>>>> 896038468511fd55c187f1fee1c8a49c99013c82
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
       "projectName": "CInemaApp",
       "projectPath": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
@@ -65,15 +93,40 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\babyg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+      "projectUniqueName": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "projectName": "CInemaApp",
+      "projectPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "packagesPath": "C:\\Users\\Roomy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Roomy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+=======
+>>>>>>> Stashed changes
+      "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj",
+      "projectName": "filter",
+      "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\filter.csproj",
+      "packagesPath": "C:\\Users\\basvo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\basvo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 896038468511fd55c187f1fee1c8a49c99013c82
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.0"
+        "netcoreapp3.1"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
           "projectReferences": {}
         }
       },
@@ -84,7 +137,15 @@
       }
     },
     "frameworks": {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "netcoreapp3.0": {
+=======
+      "netcoreapp3.1": {
+>>>>>>> Stashed changes
+=======
+      "netcoreapp3.1": {
+>>>>>>> Stashed changes
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -101,6 +162,8 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
@@ -119,6 +182,10 @@
             "version": "[3.0.0, 3.0.0]"
           }
         ],
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -133,7 +200,11 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> 896038468511fd55c187f1fee1c8a49c99013c82
     }
   ]
 }

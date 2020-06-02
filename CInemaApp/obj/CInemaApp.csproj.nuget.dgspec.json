@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {}
   },
   "projects": {
@@ -15,6 +16,23 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\babyg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+        "projectName": "CInemaApp",
+        "projectPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+        "packagesPath": "C:\\Users\\Roomy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Roomy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 896038468511fd55c187f1fee1c8a49c99013c82
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
