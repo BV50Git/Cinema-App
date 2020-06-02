@@ -18,6 +18,14 @@ namespace CInemaApp
     {
         public void Paymentoption()
         {
+            string[] Array = Globals.array;
+            Console.WriteLine("please tell us your age group (type 1 if you are below 12 years old. 2 if you are between 12 and 15. 3 if this and this. 4 if this and this. )");
+            string agegroup = Console.ReadLine();
+            if (agegroup == "1")
+            {
+                int a = 2;
+            }
+
             Console.WriteLine("please choose your payment option! (type the number of your choice to choose)");
             string c = "0";
             string s = "";
