@@ -1,5 +1,4 @@
-﻿using System;
-class Program
+﻿class Program
 {
     public static void Main()
     {
@@ -25,7 +24,5 @@ class Program
         b = b || c;
         c = d;
         d = a && d;
-
-        Console.WriteLine("Hello");
     }
 }
