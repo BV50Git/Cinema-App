@@ -712,7 +712,8 @@ namespace CInemaApp
                 Console.BackgroundColor = color;
                 Console.WriteLine($"Background color set to {color}");
             }*/
-            Console.BackgroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
                 Login.Question();
         }
