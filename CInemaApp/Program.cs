@@ -126,29 +126,29 @@ namespace CInemaApp
 
 
     }
-        // the class for the costumer this way the costumer can use different functions within the application
-        public class Costumer
+    // the class for the costumer this way the costumer can use different functions within the application
+    public class Costumer
+    {
+        public System.Collections.Generic.List<string> array_movie_times_and_location;
+        public string[] Newarray;
+        public string[] Shows_prices_by_age()
         {
-            public System.Collections.Generic.List<string> array_movie_times_and_location;
-            public string[] Newarray;
-            public string[] Shows_prices_by_age()
-            {
-                Console.WriteLine("The prices are as follows: ");
-                Console.WriteLine(Newarray[0]);
-                Console.WriteLine(Newarray[1]);
-                Console.WriteLine(Newarray[2]);
-                Console.WriteLine(Newarray[3]);
-                Console.WriteLine(Newarray[4]);
-                return Newarray;
-            }
-            public System.Collections.Generic.List<string> Show_times_and_dates()
-            {
-                Console.WriteLine(array_movie_times_and_location);
-                var Newarray = array_movie_times_and_location;
-                return Newarray;
-            }
+            Console.WriteLine("The prices are as follows: ");
+            Console.WriteLine(Newarray[0]);
+            Console.WriteLine(Newarray[1]);
+            Console.WriteLine(Newarray[2]);
+            Console.WriteLine(Newarray[3]);
+            Console.WriteLine(Newarray[4]);
+            return Newarray;
         }
-    
+        public System.Collections.Generic.List<string> Show_times_and_dates()
+        {
+            Console.WriteLine(array_movie_times_and_location);
+            var Newarray = array_movie_times_and_location;
+            return Newarray;
+        }
+    }
+
 
     public class Login
     {
@@ -219,7 +219,7 @@ namespace CInemaApp
         }
         public static void Upcoming()
         {
-            
+
             Console.WriteLine("These are the upcoming movies: ");
             List<string> Movies = new List<string>();
             Movies.Add("Bad Boys for Life from 2020");
@@ -386,12 +386,12 @@ namespace CInemaApp
             else
                 Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
         }
-            public static void Exit()
-            {
-                Console.WriteLine("Thank you for visiting Sally's cafe");
-                bb();
-            }
-        
+        public static void Exit()
+        {
+            Console.WriteLine("Thank you for visiting Sally's cafe");
+            bb();
+        }
+
 
         public static void Choices()
         {
@@ -510,8 +510,8 @@ namespace CInemaApp
         }
         public static void Prices()
         {
-            
-            
+
+
             string x = "0";
             while (x != "6")
             {
@@ -546,7 +546,8 @@ namespace CInemaApp
                     Console.WriteLine("here");
                     Console.WriteLine(System.IO.File.ReadAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json"));
                 }
-                if (x == "4") {
+                if (x == "4")
+                {
                     bb();
                     x = "4";
                 }
@@ -698,8 +699,8 @@ namespace CInemaApp
         {
             Console.WriteLine("Name of the movie: ");
             string filmname = Console.ReadLine();
-            
-            
+
+
             //goes through the whole json file
             for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
             {
@@ -842,11 +843,11 @@ namespace CInemaApp
             }*/
             Console.BackgroundColor = ConsoleColor.Red;
             Console.Clear();
-                Login.Question();
+            Login.Question();
         }
     }
 }
 
 
-             
-    
+
+
