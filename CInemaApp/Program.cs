@@ -19,9 +19,9 @@ namespace CInemaApp
 
     public class Paymentsystem
     {
-        public void Paymentoption()
+        public void Payment()
         {
-            Console.WriteLine("Please choose your payment option! (press a number to choose)");
+
             string c = "0";
             string s = "";
             int counter = 1;
@@ -359,9 +359,66 @@ namespace CInemaApp
 
         public static void PaymentOption()
         {
-            Console.WriteLine("These are the following payment options\n");
-            Console.WriteLine("1) IDEAL");
-            Console.WriteLine("2) Creditcard");
+            string c = "0";
+            string s = "";
+            int counter = 1;
+            int options = 2;
+            int i;
+            int j;
+            int height = 9;
+            int width = 9;
+            while (counter < options)
+            {
+                for (i = 1; i <= height; i++)
+                {
+                    for (j = 1; j <= width; j++)
+                    {
+                        if (i == 1 || i == height || j == 1 || j == width)
+                            s = s + " *";
+                        else
+                            s = s + "  ";
+                    }
+                    s = s + "\n";
+                }
+                if (counter == 1)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine("   IDEAL option 1");
+                }
+                else if (counter == 2)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine(" Credit Card option 2");
+                }
+                counter = counter + 1;
+            }
+
+            Console.WriteLine(s);
+            Console.WriteLine(" Credit Card option 2");
+            while (c != "4")
+            {
+                c = Console.ReadLine();
+                if (c == "1")
+                {
+                    Console.WriteLine("Please enter your IDEAL information");
+                    User.STARS();
+                    string information = Console.ReadLine();
+                    string x = "5";
+                    c = "4";
+                }
+                if (c == "2")
+                {
+                    Console.WriteLine("Please enter your Credit Card information");
+                    User.STARS();
+                    string information = Console.ReadLine();
+
+                    c = "4";
+                }
+
+
+            }
+            // shows final ticket and show the time and payment done.
+            string infopayed = " Payment completed";
 
         }
 
