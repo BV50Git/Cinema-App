@@ -19,7 +19,7 @@ namespace CInemaApp
 
     public class Paymentsystem
     {
-        public static void Paymentoption()
+        public void Paymentoption()
         {
             Console.WriteLine("Please choose your payment option! (press a number to choose)");
             string c = "0";
@@ -226,7 +226,7 @@ namespace CInemaApp
             //goes through the whole json file
             for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
             {
-                // removes a movie if it found a name with the same input
+                
                 if (Moviename == Data.LoadMovies()[x - 1].GetMovieName())
                 {
                     
