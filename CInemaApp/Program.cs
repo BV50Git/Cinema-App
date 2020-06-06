@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
+using CinemaApp;
+
 
 namespace CInemaApp
 {
@@ -12,11 +14,12 @@ namespace CInemaApp
         public static string[] array;
         public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
         public static string answer;
+        public static string Moviename;
     }
 
     public class Paymentsystem
     {
-        public void Paymentoption()
+        public static void Paymentoption()
         {
             Console.WriteLine("Please choose your payment option! (press a number to choose)");
             string c = "0";
@@ -211,11 +214,34 @@ namespace CInemaApp
         public static void Current()
         {
             Console.WriteLine("Welcome to the current movies page!");
+            List<Movie> list = Data.LoadMovies();
             for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
             {
-                Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
+                Console.WriteLine(x + " " + Data.LoadMovies()[x - 1].GetMovieName());
+
             }
-            bb();
+            Console.WriteLine("Enter the name of the movie you want to make an reservation: ");
+            string Moviename = Console.ReadLine();
+            bool found = false;
+            //goes through the whole json file
+            for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+            {
+                // removes a movie if it found a name with the same input
+                if (Moviename == Data.LoadMovies()[x - 1].GetMovieName())
+                {
+                    
+                    string seats = SeatingReservation.Seat();
+                    
+                    Console.WriteLine("you made an reservation for the film: " + Moviename + ", your seats are: " + seats);
+                    found = true;
+                }
+            }
+            if (found == false)
+            {
+                Console.WriteLine("Movie not found");
+            }
+                bb();
+            
         }
         public static void Upcoming()
         {

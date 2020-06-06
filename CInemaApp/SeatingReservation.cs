@@ -1,12 +1,13 @@
 ﻿using CInemaApp;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace CinemaApp
 {   
-    class seatingReservation
+    public class SeatingReservation
     { 
-        public static void Seat()
+        public static string Seat()
         {
             int e = 0;
             int width = 0;
@@ -15,6 +16,10 @@ namespace CinemaApp
             int userRow = 0;
             int userColumn = 0;
             int userSeat = 0;
+            List<List<int>> reservation = new List<List<int>>();
+            List<int> chosen_seat = new List<int>();
+            int c = 0;
+            string s = "";
 
 
             if (movieHall == 1)
@@ -66,11 +71,18 @@ namespace CinemaApp
             void seatSelection()
             {   
                 Console.WriteLine("Enter the row of the seat you want to reserve (1 - " + height + ")");
+                //int row = userRow;
                 bool parseSucc = int.TryParse(Console.ReadLine(), out userRow);
                 Console.WriteLine("Enter the column of the seat you want to reserve (1 - " + width + ")");
                 parseSucc = int.TryParse(Console.ReadLine(), out userColumn);
+                //int colum = userColumn;
+                
                 userSeat = (userRow - 1) * width + userColumn;
+                
                 if (!userSeats.Contains(userSeat) && userRow <= height && userColumn <= width) {
+                    chosen_seat.Add(userRow);
+                    chosen_seat.Add(userColumn);
+                    reservation.Add(chosen_seat);
                     userSeats[e] = userSeat;
                     showSeats();
                 }
@@ -90,7 +102,33 @@ namespace CinemaApp
 
     
             }
-            Admin.bb();
+            //Admin.bb();
+            
+            foreach (var sublist in reservation)
+            {
+                foreach (var value in sublist)
+                {
+                   
+                    s += value;
+                       
+                    if (c < 1)
+                    {
+                        
+                        s += ":";
+                        c += 1;
+                    }
+                    else
+                    {
+                        
+                        s += ", ";
+                        c = 0;
+                    }
+                }
+                Console.WriteLine();
+                break;
+            }
+
+            return s;
         }
     }
 
