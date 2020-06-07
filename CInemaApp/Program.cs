@@ -505,7 +505,7 @@ namespace CInemaApp
 
         }
 
-        public static void PaymentOption()
+        public static void PaymentOptionsally()
         {
             string c = "0";
             string s = "";
@@ -885,7 +885,93 @@ namespace CInemaApp
 
         }
 
-        public static void OrderMenu()
+    public void Paymentsally()
+    {
+        Console.WriteLine(" you will have to pay " + Globals.total);
+        Console.WriteLine("please choose your payment option! (type the number of your choice to choose)");
+        string c = "0";
+        string s = "";
+        int counter = 1;
+        int options = 2;
+        int i;
+        int j;
+        int height = 9;
+        int width = 9;
+        while (counter < options)
+        {
+            for (i = 1; i <= height; i++)
+            {
+                for (j = 1; j <= width; j++)
+                {
+                    if (i == 1 || i == height || j == 1 || j == width)
+                        s = s + " *";
+                    else
+                        s = s + "  ";
+                }
+                s = s + "\n";
+            }
+            if (counter == 1)
+            {
+                Console.WriteLine(s);
+                Console.WriteLine("   ideal option 1");
+            }
+            else if (counter == 2)
+            {
+                Console.WriteLine(s);
+                Console.WriteLine(" credit card option 2");
+            }
+            counter = counter + 1;
+        }
+
+        Console.WriteLine(s);
+        Console.WriteLine(" credit card option 2");
+        while (c != "4")
+        {
+            c = Console.ReadLine();
+            if (c == "1")
+            {
+                int d = 0;
+                while (d != 1)
+                {
+                    Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                    string information = Console.ReadLine();
+                    if (information.Length != 8)
+                    {
+                        Console.WriteLine("please try again you seemed to have typed the wrong code");
+                    }
+                    else if (information.Length == 8)
+                    {
+                        c = "4";
+                        d = 1;
+                    }
+                }
+            }
+            if (c == "2")
+            {
+                int d = 0;
+                while (d != 1)
+                {
+                    Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                    string information = Console.ReadLine();
+                    if (information.Length != 8)
+                    {
+                        Console.WriteLine("please try again you seemed to have typed the wrong code");
+                    }
+                    else if (information.Length == 8)
+                    {
+                        c = "4";
+                        d = 1;
+                    }
+
+                }
+            }
+
+
+        }
+        // shows final ticket and show the time and payment done.
+        string infopayed = " everything is payed ";
+    }
+    public static void OrderMenu()
         {
 
             List<string> MenuItems = new List<string>();
