@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using CinemaApp;
@@ -15,6 +16,7 @@ namespace CInemaApp
         public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
         public static string answer;
         public static string Moviename;
+        public static string total;
     }
 
     public class Paymentsystem
@@ -299,7 +301,7 @@ namespace CInemaApp
         }
         public static void Sally()
         {
-            Console.WriteLine("Welcome to Sally's Cafe. What can I help you with today?");
+            Console.WriteLine("What can I help you with today?");
             Console.WriteLine("1) Display Food & Drink menu");
             Console.WriteLine("2) Display payment options");
             Console.WriteLine("3) Order from Food & Drink menu");
@@ -328,27 +330,32 @@ namespace CInemaApp
 
         public static void FoodDrinkMenu()
         {
-            Console.WriteLine("This is the Drink & Food menu\n");
-            Console.WriteLine("Water : $2");
-            Console.WriteLine("Tea : $2");
-            Console.WriteLine("Coffee : $2");
-            Console.WriteLine("Slushie : $3");
-            Console.WriteLine("Milkshakes : $4");
-            Console.WriteLine("Soda : $3");
-            Console.WriteLine("Beer : $3");
-            Console.WriteLine("Wine : $6\n");
+            Console.WriteLine("Welcome to Sally's. Prices are in $$$");
+            List<MenuItems> SubTotal = new List<MenuItems>();
+            SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Tea", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Coffee", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Slushie", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Milkshakes", Price = "4" });
+            SubTotal.Add(new MenuItems() { Name = "Soda", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Beer", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Wine", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Popcorn", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Medium Popcorn", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Big Popcorn", Price = "7" });
+            SubTotal.Add(new MenuItems() { Name = "Nachos & Dip", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Cotton Candy", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Cotton Candy", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Ben & Jerry's", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Ben & Jerry's", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 3", Price = "6" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
+            SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
 
-            Console.WriteLine("Small Popcorn : $3");
-            Console.WriteLine("Medium Popcorn : $5");
-            Console.WriteLine("Big Popcorn : $7");
-            Console.WriteLine("Nachos & Dip : $5");
-            Console.WriteLine("Cotton Candy : $3");
-            Console.WriteLine("Big Cotton Candy : $5");
-            Console.WriteLine("Small Ben & Jerry's : $3");
-            Console.WriteLine("Big Ben & Jerry's : $5");
-            Console.WriteLine("Dunkin Donuts set of 3: $6");
-            Console.WriteLine("Dunkin Donuts set of 6: $10");
-            Console.WriteLine("Cupcake : $2\n");
+            foreach (MenuItems x in SubTotal)
+            {
+                Console.WriteLine(x.getData());
+            }
 
             Console.WriteLine("Press Enter to order\n");
             Console.ReadLine();
@@ -444,12 +451,8 @@ namespace CInemaApp
             MenuItems.Add("Big Ben & Jerry's");
             MenuItems.Add("Dunkin Donuts set of 3");
             MenuItems.Add("Dunkin Donuts set of 6");
-            MenuItems.Add("Cupcake\n");
+            MenuItems.Add("Cupcakes");
 
-
-            Console.WriteLine("Menu\n");
-            foreach (string message2 in MenuItems)
-                Console.WriteLine(message2);
 
             Console.WriteLine("What would you like to Order?\n");
             string message = Console.ReadLine();
@@ -469,7 +472,17 @@ namespace CInemaApp
             else
                 Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
         }
-            public static void Exit()
+        public class MenuItems
+        {
+            public string Name { get; set; }
+            public string Price { get; set; }
+            public string getData()
+            {
+                return this.Name + " : " + this.Price;
+            }
+
+        }
+        public static void Exit()
             {
                 Console.WriteLine("Thank you for visiting Sally's cafe");
                 bb();
@@ -503,7 +516,7 @@ namespace CInemaApp
                     break;
                 case "5":
                     STARS();
-                    Console.WriteLine("Welcome to sally's cafe page!");
+                    Console.WriteLine("Welcome to Sally's Cafe!");
                     Sally();
                     break;
                 case "6":
@@ -649,7 +662,7 @@ namespace CInemaApp
         }
         public static void Sally()
         {
-            Console.WriteLine("Welcome to Sally's Cafe. What can I help you with today?");
+            Console.WriteLine("What can I help you with today?");
             Console.WriteLine("1) Display Food & Drink menu");
             Console.WriteLine("2) Display payment options");
             Console.WriteLine("3) Order from Food & Drink menu");
@@ -678,32 +691,41 @@ namespace CInemaApp
 
         public static void FoodDrinkMenu()
         {
-            Console.WriteLine("This is the Drink & Food menu\n");
-            Console.WriteLine("Water : $2");
-            Console.WriteLine("Tea : $2");
-            Console.WriteLine("Coffee : $2");
-            Console.WriteLine("Slushie : $3");
-            Console.WriteLine("Milkshakes : $4");
-            Console.WriteLine("Soda : $3");
-            Console.WriteLine("Beer : $3");
-            Console.WriteLine("Wine : $6\n");
+            Console.WriteLine("Welcome to Sally's. Prices are in $$$");
+            List<MenuItems> SubTotal = new List<MenuItems>();
+            SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Tea", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Coffee", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Slushie", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Milkshakes", Price = "4" });
+            SubTotal.Add(new MenuItems() { Name = "Soda", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Beer", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Wine", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Popcorn", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Medium Popcorn", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Big Popcorn", Price = "7" });
+            SubTotal.Add(new MenuItems() { Name = "Nachos & Dip", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Cotton Candy", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Cotton Candy", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Ben & Jerry's", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Ben & Jerry's", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 3", Price = "6" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
+            SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
 
-            Console.WriteLine("Small Popcorn : $3");
-            Console.WriteLine("Medium Popcorn : $5");
-            Console.WriteLine("Big Popcorn : $7");
-            Console.WriteLine("Nachos & Dip : $5");
-            Console.WriteLine("Cotton Candy : $3");
-            Console.WriteLine("Big Cotton Candy : $5");
-            Console.WriteLine("Small Ben & Jerry's : $3");
-            Console.WriteLine("Big Ben & Jerry's : $5");
-            Console.WriteLine("Dunkin Donuts set of 3: $6");
-            Console.WriteLine("Dunkin Donuts set of 6: $10");
-            Console.WriteLine("Cupcake : $2\n");
+            string hi = Console.ReadLine();
+
+            var value = SubTotal.First(item => item.Name == hi).Price;
+            string total = value;
+
+            foreach (MenuItems x in SubTotal)
+            {
+                Console.WriteLine(x.getData());
+            }
 
             Console.WriteLine("Press Enter to order\n");
             Console.ReadLine();
             OrderMenu();
-
 
         }
 
@@ -737,12 +759,9 @@ namespace CInemaApp
             MenuItems.Add("Big Ben & Jerry's");
             MenuItems.Add("Dunkin Donuts set of 3");
             MenuItems.Add("Dunkin Donuts set of 6");
-            MenuItems.Add("Cupcake \n");
+            MenuItems.Add("Cupcakes");
 
-
-            Console.WriteLine("Menu\n");
-            foreach (string message2 in MenuItems)
-                Console.WriteLine(message2);
+            
 
             Console.WriteLine("What would you like to Order?\n");
             string message = Console.ReadLine();
@@ -750,18 +769,29 @@ namespace CInemaApp
 
 
             if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message);
+                Console.WriteLine("You have succesfully ordered " + message + Globals.total);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
+
             string messages = Console.ReadLine();
-
             if (true == (MenuItems.Contains(messages)))
-                Console.WriteLine("You have succesfully ordered " + messages);
-
+                Console.WriteLine("You have succesfully ordered " + messages + Globals.total);
+                
             else
                 Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
 
+
+
+        }
+        public class MenuItems
+        {
+            public string Name { get; set; }
+            public string Price { get; set; }
+            public string getData()
+            {
+                return this.Name + " : " + this.Price;
+            }
 
         }
 
@@ -867,7 +897,7 @@ namespace CInemaApp
                     break;
                 case "5":
                     STARS();
-                    Console.WriteLine("Welcome to sally's cafe page!");
+                    Console.WriteLine("Welcome to Sally's Cafe!");
                     Sally();
                     break;
                 case "6":
