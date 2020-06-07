@@ -380,11 +380,11 @@ namespace CInemaApp
             
             Console.WriteLine("These are the upcoming movies: ");
             List<string> Movies = new List<string>();
-            Movies.Add("Bad Boys for Life from 2020");
-            Movies.Add("The Godfather from 1974");
-            Movies.Add("1917 from 2020");
-            Movies.Add("Guardians of the Galaxy from 2014");
-            Movies.Add("Joker from 2019");
+            Movies.Add("Bad Boys for Life (2020)");
+            Movies.Add("The Godfather (1974)");
+            Movies.Add("1917 (2020)");
+            Movies.Add("Guardians of the Galaxy (2014)");
+            Movies.Add("Joker (2019)");
 
             foreach (var movie in Movies)
 
@@ -423,7 +423,7 @@ namespace CInemaApp
                 }
                 else
                 {
-                    Console.WriteLine("input invalid please try again");
+                    Console.WriteLine("False input. Try again");
                     Prices();
                 }
             }
@@ -435,6 +435,66 @@ namespace CInemaApp
             Console.WriteLine("Sunday premire night every sunday night one or more of the upcoming movies will play for the first time");
             bb();
         }
+
+        public static void Subscription()
+        {
+            Console.WriteLine("Welcome to the subscriptions page!");
+            Console.WriteLine("Press 'S' to subscribe,\n'I' for more information,\n'Enter' to go back to the main menu");
+            var sub = Console.ReadLine();
+
+            if (sub.Equals("S", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Thank you for choosing to subscribe to the Cinemapps newsletter! Please enter the following information:");
+                Console.Write("First name: ");
+                var fname = Console.ReadLine();
+                Console.Write("Surname: ");
+                var sname = Console.ReadLine();
+                Console.Write("Age: ");
+                var age = Console.ReadLine();
+                Console.Write("Email: ");
+                var mail = Console.ReadLine();
+
+                var every = fname + " " + sname + ", " + age + ", " + mail;
+
+                //Write to json file
+                string file = JsonConvert.SerializeObject(every, Formatting.Indented);
+                File.AppendAllText("subscriptions.json", file);
+                Console.WriteLine("You have been subscribed!");
+            }
+
+
+            else if (sub.Equals("I", StringComparison.OrdinalIgnoreCase))
+            {
+                STARS();
+                Console.WriteLine("If you subscribe to Cinemapps, you will receive a monthly news letter by email!");
+                Console.WriteLine("It will include information about upcoming movies, events, and eventual discounts, as well as any other news surrounding our beloved cinema!");
+                Console.WriteLine("Press any key to go back to the subscription page");
+                var back = Console.ReadLine();
+
+                if (back == "A")
+                {
+                    STARS();
+                    Subscription();
+                }
+                else
+                {
+                    STARS();
+                    Subscription();
+                }
+            }
+
+            else if (sub == "" + "")
+            {
+                Menu();
+                Console.WriteLine("pass");
+            }
+            else
+            {
+                Console.WriteLine("False input. Try again");
+                STARS();
+                Subscription();
+            }
+        }
         public static void Sally()
         {
             Console.WriteLine("What can I help you with today?");
@@ -442,7 +502,7 @@ namespace CInemaApp
             Console.WriteLine("2) Display payment options");
             Console.WriteLine("3) Order from Food & Drink menu");
             Console.WriteLine("4) Exit\n");
-            Console.Write("Please select your option. You can only choose 1, 2, 3 or 4 \n");
+            Console.WriteLine("Please select your option.");
 
 
             switch (Console.ReadLine())
@@ -451,7 +511,7 @@ namespace CInemaApp
                     FoodDrinkMenu();
                     break;
                 case "2":
-                PaymentOptionsally();
+                    PaymentOptionsally();
                     break;
                 case "3":
                     OrderMenu();
@@ -498,7 +558,7 @@ namespace CInemaApp
                 Console.WriteLine(x.getData());
             }
 
-            Console.WriteLine("Press Enter to order\n");
+            Console.WriteLine("Press Enter to order");
             Console.ReadLine();
             OrderMenu();
 
@@ -507,7 +567,7 @@ namespace CInemaApp
 
         public static void PaymentOptionsally()
         {
-        Console.WriteLine("These are the following payment options\n");
+        Console.WriteLine("These are the following payment options");
         Console.WriteLine("1) IDEAL");
         Console.WriteLine("2) Creditcard");
 
@@ -538,14 +598,14 @@ namespace CInemaApp
             MenuItems.Add("Cupcakes");
 
 
-            Console.WriteLine("What would you like to Order?\n");
+            Console.WriteLine("What would you like to Order?");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
             Console.WriteLine(Globals.total);
 
 
             if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message + " Your total is $" + Globals.total);
+                Console.WriteLine("You have succesfully ordered " + message + ". Your total is $" + Globals.total);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
@@ -609,6 +669,9 @@ namespace CInemaApp
                     Contact();
                     break;
                 case "7":
+                    Subscription();
+                    break;
+                case "8":
                     Console.WriteLine("Goodbye.");
                     Environment.Exit(0);
                     break;
