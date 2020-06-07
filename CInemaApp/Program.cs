@@ -488,6 +488,11 @@ namespace CInemaApp
             SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
             SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
 
+            string hi = Console.ReadLine();
+
+            var value = SubTotal.First(item => item.Name == hi).Price;
+            string total = value;
+
             foreach (MenuItems x in SubTotal)
             {
                 Console.WriteLine(x.getData());
@@ -593,17 +598,18 @@ namespace CInemaApp
             Console.WriteLine("What would you like to Order?\n");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
+            Console.WriteLine(Globals.total);
 
 
             if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message);
+                Console.WriteLine("You have succesfully ordered " + message + " Your total is $" + Globals.total);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
             string messages = Console.ReadLine();
 
             if (true == (MenuItems.Contains(messages)))
-                Console.WriteLine("You have succesfully ordered " + messages);
+                Console.WriteLine("You have succesfully ordered " + messages + " Your total is $" + Globals.total);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
@@ -908,17 +914,18 @@ namespace CInemaApp
             Console.WriteLine("What would you like to Order?\n");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
+            Console.WriteLine(Globals.total);
 
 
             if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message + Globals.total);
+                Console.WriteLine("You have succesfully ordered " + message + " Your total is $" + Globals.total);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
 
             string messages = Console.ReadLine();
             if (true == (MenuItems.Contains(messages)))
-                Console.WriteLine("You have succesfully ordered " + messages + Globals.total);
+                Console.WriteLine("You have succesfully ordered " + messages + " Your total is $" + Globals.total);
                 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
