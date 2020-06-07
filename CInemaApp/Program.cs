@@ -399,16 +399,22 @@ namespace CInemaApp
                 x = Console.ReadLine();
                 if (x == "1")
                 {
-                    Console.WriteLine("here");
-                    Console.WriteLine(System.IO.File.ReadAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json"));
+                    Console.WriteLine("the prices are as follows:");
+                    string str = System.IO.File.ReadAllText(@"C:\Users\Acer\source\repos\json1.json");
+                    string[] sepparator = { "{", "Newarray", "[", "}", "]", ":", ",", "\"", "array_movie_times_and_location", "null" };
+                    string[] stringlist = str.Split(sepparator, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string s in stringlist)
+                    {
+                        Console.WriteLine(s);
+                    }
 
 
-                    // future reading code to make sure it reads without the brackets
-                    //for (int d = 1; d < Dataprices.LoadPrices().Count + 1; d++)
-                    //{
-                    //    Console.WriteLine(x + ": " + Dataprices.LoadPrices()[d - 1].Getmovietime());
-                    //}
-                }
+                // future reading code to make sure it reads without the brackets
+                //for (int d = 1; d < Dataprices.LoadPrices().Count + 1; d++)
+                //{
+                //    Console.WriteLine(x + ": " + Dataprices.LoadPrices()[d - 1].Getmovietime());
+                //}
+            }
                 if (x == "2")
                 {
 
@@ -769,8 +775,14 @@ namespace CInemaApp
                 // still is unable to read from the json file
                 if (x == "3")
                 {
-                    Console.WriteLine("here");
-                    Console.WriteLine(System.IO.File.ReadAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json"));
+                    Console.WriteLine("the prices are as follows:");
+                    string str = System.IO.File.ReadAllText(@"C:\Users\Acer\source\repos\json1.json");
+                    string[] sepparator = { "{", "Newarray", "[", "}", "]", ":", ",", "\"", "array_movie_times_and_location", "null" };
+                    string[] stringlist = str.Split(sepparator, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string s in stringlist)
+                    {
+                        Console.WriteLine(s);
+                    }
                 }
                 if (x == "4") {
                     bb();
