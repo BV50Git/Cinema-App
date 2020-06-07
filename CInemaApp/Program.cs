@@ -31,8 +31,8 @@ namespace CInemaApp
             {
 
 
-                Console.WriteLine("please tell us the ages of the group of visitors.");
-                Console.WriteLine("(type 1 if you are below 12 years old.\n2 if you are between 12 and 26.\n3 if you are between 27 and 50.\n4 if you are 50 +.)\nplease repeat this for each groupmember.");
+                Console.WriteLine("Please choose your age group");
+                Console.WriteLine("Press 1 if you are below 12 years old\nPress 2 if you are between 12 and 26 years old\nPress 3 if you are between 27 and 50 years old\nPress 4 if you are 50 years or older");
  
                 string agegroup = Console.ReadLine();
                 int j = 0;
@@ -44,40 +44,35 @@ namespace CInemaApp
                         
                         if (agegroup == "1")
                         {
-                            Console.WriteLine("here");
-                            
-                            
+                               
                             counter = counter + 1;
-                            string response = "this is group member " + counter + " ";
+                            string response = "This is group member " + counter + " ";
                             output = output + " " + response + "and is below 12 years old. "; 
                             
                             j++;
                         }
                         if (agegroup == "2")
                         {
-                            Console.WriteLine("here");
                             
                             counter = counter + 1;
-                            string response = "this is group member " + counter + " ";
+                            string response = "This is group member " + counter + " ";
                             output = output + " " + response + "and is between 12 and 26 years old. ";
                             j++;
                         }
                         if (agegroup == "3")
                         {
-                            Console.WriteLine("here");
                             
                             counter = counter + 1;
-                            string response = "this is group member " + counter + " ";
+                            string response = "This is group member " + counter + " ";
                             output = output + " " + response + "and is between 27 and 50 years old. ";
                             j++;
                         }
                         if (agegroup == "4")
                         {
-                            Console.WriteLine("here");
                             
                             counter = counter + 1;
-                            string response = "this is group member " + counter + " ";
-                            output = output + " " + response + "and is 50+. ";
+                            string response = "This is group member " + counter + " ";
+                            output = output + " " + response + "and is 50 years or older. ";
                             j++;
                         }
                     }
@@ -87,38 +82,33 @@ namespace CInemaApp
                         if (agegroup == "1")
                         {
                             
-                            Console.WriteLine("here");
-                            
                             counter = counter + 1;
-                            string response = "you are ";
+                            string response = "You are ";
                             output = output + " " + response + "and you are below 12 years old. ";
                             j++;
                         }
                         if (agegroup == "2")
                         {
-                            Console.WriteLine("here");
                             
                             counter = counter + 1;
-                            string response = "you are ";
+                            string response = "You are ";
                             output = output + " " + response + "and you are between 12 and 26 years old. ";
                             j++;
                         }
                         if (agegroup == "3")
                         {
-                            Console.WriteLine("here");
                             
                             counter = counter + 1;
-                            string response = "you are ";
+                            string response = "You are ";
                             output = output + " " + response + "and you are between 27 and 50 years old. ";
                             j++;
                         }
                         if (agegroup == "4")
                         {
-                            Console.WriteLine("here");
                             
                             counter = counter + 1;
-                            string response = "you are ";
-                            output = output + " " + response + "and you are 50+. ";
+                            string response = "You are ";
+                            output = output + " " + response + "and you are 50 years or older. ";
                             j++;
                         }
                     }
@@ -131,7 +121,7 @@ namespace CInemaApp
         public void Payment()
         {
 
-            Console.WriteLine("please choose your payment option! (type the number of your choice to choose)");
+            Console.WriteLine("Please choose a payment option");
             string c = "0";
             string s = "";
             int counter = 1;
@@ -742,11 +732,11 @@ namespace CInemaApp
         {
             Console.WriteLine("These are the upcoming movies: ");
             List<string> Movies = new List<string>();
-            Movies.Add("Bad Boys for Life from 2020");
-            Movies.Add("The Godfather from 1974");
-            Movies.Add("1917 from 2020");
-            Movies.Add("Guardians of the Galaxy from 2014");
-            Movies.Add("Joker from 2019");
+            Movies.Add("Bad Boys for Life (2020)");
+            Movies.Add("The Godfather (1974)");
+            Movies.Add("1917 (2020)");
+            Movies.Add("Guardians of the Galaxy (2014)");
+            Movies.Add("Joker (2019)");
 
             foreach (var movie in Movies)
 
@@ -760,10 +750,10 @@ namespace CInemaApp
             string x = "0";
             while (x != "6")
             {
-                Console.WriteLine("Please type your choice 1 to fill in information. 2 to write the new information to the json fil\n 3 to get information from the json file. 4 to go to exit");
+                Console.WriteLine("Press 1 to fill in information\nPress 2 to write the new information to the json file\nPress 3 to get information from the json file\nPress 4 to exit");
                 x = Console.ReadLine();
                 if (x == "1")
-                // option to create the arrays of information in final program only useable by administrato
+                // option to create the arrays of information in final program only useable by administrator
                 {
                     Administrator testing = new Administrator();
                     string[] array = testing.Age_prices_array();
