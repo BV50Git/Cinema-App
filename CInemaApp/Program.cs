@@ -146,18 +146,13 @@ namespace CInemaApp
                 if (counter == 1)
                 {
                     Console.WriteLine(s);
-                    Console.WriteLine("   ideal option 1");
-                }
-                else if (counter == 2)
-                {
-                    Console.WriteLine(s);
-                    Console.WriteLine(" credit card option 2");
+                    Console.WriteLine("   IDEAL (option 1)");
                 }
                 counter = counter + 1;
             }
 
             Console.WriteLine(s);
-            Console.WriteLine(" credit card option 2");
+            Console.WriteLine(" Credit Card (option 2)");
             while (c != "4")
             {
                 c = Console.ReadLine();
@@ -166,11 +161,11 @@ namespace CInemaApp
                     int d = 0;
                     while (d != 1)
                     {
-                        Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
                         string information = Console.ReadLine();
                         if (information.Length != 8)
                         {
-                            Console.WriteLine("please try again you seemed to have typed the wrong code");
+                            Console.WriteLine("Please try again, you seemed to have typed the wrong code");
                         }
                         else if (information.Length == 8)
                         {
@@ -184,11 +179,11 @@ namespace CInemaApp
                     int d = 0;
                     while (d != 1)
                     {
-                        Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
                         string information = Console.ReadLine();
                         if (information.Length != 8)
                         {
-                            Console.WriteLine("please try again you seemed to have typed the wrong code");
+                            Console.WriteLine("Please try again you seemed to have typed the wrong code");
                         }
                         else if (information.Length == 8)
                         {
@@ -202,7 +197,7 @@ namespace CInemaApp
 
             }
             // shows final ticket and show the time and payment done.
-            string infopayed = " everything is payed ";
+            Console.WriteLine("Everything has been payed for");
         }
 
 
@@ -232,29 +227,11 @@ namespace CInemaApp
             //System.IO.File.AppendAllText(@"C: \Users\Acer\AppData\Local\Temp\~vs39C6.json", stringjson);
             return array;
         }
-        public System.Collections.Generic.List<string> Times_and_dates()
-        {
-            string location = "Location: Rotterdam, Wijnhaven 107.";
-            var array_movie_times_and_location = new System.Collections.Generic.List<string>() { };
-
-            Console.WriteLine("At what time does the movie play?");
-            string time = Console.ReadLine();
-            Console.WriteLine("At which date does the movie play?");
-            string date = Console.ReadLine();
-            string newdata = "Movie starts at " + time + " on " + date + " at " + location;
-            array_movie_times_and_location.Add(newdata);
-            Console.WriteLine(array_movie_times_and_location[0]);
-
-
-            return array_movie_times_and_location;
-        }
-
 
     }
         // the class for the costumer this way the costumer can use different functions within the application
         public class Costumer
         {
-            public System.Collections.Generic.List<string> array_movie_times_and_location;
             public string[] Newarray;
             public string[] Shows_prices_by_age()
             {
@@ -264,12 +241,6 @@ namespace CInemaApp
                 Console.WriteLine(Newarray[2]);
                 Console.WriteLine(Newarray[3]);
                 Console.WriteLine(Newarray[4]);
-                return Newarray;
-            }
-            public System.Collections.Generic.List<string> Show_times_and_dates()
-            {
-                Console.WriteLine(array_movie_times_and_location);
-                var Newarray = array_movie_times_and_location;
                 return Newarray;
             }
         }
@@ -286,7 +257,7 @@ namespace CInemaApp
                 Admin.Menu();
             else
                 Console.WriteLine("Wrong input. Please try again");
-            Password();
+                Password();
         }
         public static void Question()
         {
@@ -342,7 +313,7 @@ namespace CInemaApp
                 Console.WriteLine(x + " " + Data.LoadMovies()[x - 1].GetMovieName());
 
             }
-            Console.WriteLine("Enter the name of the movie you want to make an reservation: ");
+            Console.WriteLine("Enter the name of the movie you want to make a reservation for: ");
             string Moviename = Console.ReadLine();
             bool found = false;
             //goes through the whole json file
@@ -354,7 +325,7 @@ namespace CInemaApp
                     
                     string seats = SeatingReservation.Seat();
                     
-                    Console.WriteLine("you made an reservation for the film: " + Moviename + ", your seats are: " + seats);
+                    Console.WriteLine("Reservation for " + Moviename + "made. Your seats are: " + seats);
                     found = true;
                 }
             }
@@ -385,12 +356,12 @@ namespace CInemaApp
             string x = "0";
             while (x != "2")
             {
-                Console.WriteLine("Please press 1 to go to the information page\nPress 2 to exit ");
+                Console.WriteLine("Please press 1 to go to the information page\nPress 2 to exit");
                 x = Console.ReadLine();
                 if (x == "1")
                 {
-                    Console.WriteLine("the prices are as follows:");
-                    string str = System.IO.File.ReadAllText(@"C:\Users\Acer\source\repos\json1.json");
+                    Console.WriteLine("The prices are as follows:");
+                    string str = File.ReadAllText(Directory.GetCurrentDirectory() + "/../../../json1.json");
                     string[] sepparator = { "{", "Newarray", "[", "}", "]", ":", ",", "\"", "array_movie_times_and_location", "null" };
                     string[] stringlist = str.Split(sepparator, StringSplitOptions.RemoveEmptyEntries);
                     foreach (string s in stringlist)
@@ -421,8 +392,8 @@ namespace CInemaApp
         public static void Events()
         {
             Console.WriteLine("Friday horror night all horror movies are 50% off");
-            Console.WriteLine("Saturday Familiy day every familiy that comes gain tickets for free food");
-            Console.WriteLine("Sunday premire night every sunday night one or more of the upcoming movies will play for the first time");
+            Console.WriteLine("Saturday Family day every familiy that comes gain tickets for free food");
+            Console.WriteLine("Sunday premiere night every Sunday night one or more of the upcoming movies will play for the first time");
             bb();
         }
 
@@ -451,7 +422,7 @@ namespace CInemaApp
                 File.AppendAllText("subscriptions.json", file);
                 Console.WriteLine("You have been subscribed!");
             }
-
+                
 
             else if (sub.Equals("I", StringComparison.OrdinalIgnoreCase))
             {
@@ -476,7 +447,6 @@ namespace CInemaApp
             else if (sub == "" + "")
             {
                 Menu();
-                Console.WriteLine("pass");
             }
             else
             {
@@ -492,7 +462,7 @@ namespace CInemaApp
             Console.WriteLine("2) Display payment options");
             Console.WriteLine("3) Order from Food & Drink menu");
             Console.WriteLine("4) Exit\n");
-            Console.WriteLine("Please select your option.");
+            Console.WriteLine("Please select your option");
 
 
             switch (Console.ReadLine())
@@ -516,7 +486,7 @@ namespace CInemaApp
 
         public static void FoodDrinkMenu()
         {
-            Console.WriteLine("Welcome to Sally's. Prices are in $$$");
+            Console.WriteLine("Welcome to Sally's! Prices are in $$$");
             List<MenuItems> SubTotal = new List<MenuItems>();
             SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
             SubTotal.Add(new MenuItems() { Name = "Tea", Price = "2" });
@@ -538,17 +508,12 @@ namespace CInemaApp
             SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
             SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
 
-            string hi = Console.ReadLine();
-
-            var value = SubTotal.First(item => item.Name == hi).Price;
-            string total = value;
-
             foreach (MenuItems x in SubTotal)
             {
                 Console.WriteLine(x.getData());
             }
 
-            Console.WriteLine("Press Enter to order");
+            Console.WriteLine("Press any key to order");
             Console.ReadLine();
             OrderMenu();
 
@@ -557,9 +522,9 @@ namespace CInemaApp
 
         public static void PaymentOptionsally()
         {
-        Console.WriteLine("These are the following payment options");
+        Console.WriteLine("These are the payment options");
         Console.WriteLine("1) IDEAL");
-        Console.WriteLine("2) Creditcard");
+        Console.WriteLine("2) Credit card");
 
     }
 
@@ -588,14 +553,14 @@ namespace CInemaApp
             MenuItems.Add("Cupcakes");
 
 
-            Console.WriteLine("What would you like to Order?");
+            Console.WriteLine("What would you like to order?");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
             Console.WriteLine(Globals.total);
 
 
             if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message + ". Your total is $" + Globals.total);
+                Console.WriteLine("You have succesfully ordered " + message + "! Your total is $" + Globals.total);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
@@ -605,7 +570,7 @@ namespace CInemaApp
                 Console.WriteLine("You have succesfully ordered " + messages + " Your total is $" + Globals.total);
 
             else
-                Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
+                Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit");
         }
         public class MenuItems
         {
@@ -619,7 +584,7 @@ namespace CInemaApp
         }
         public static void Exit()
             {
-                Console.WriteLine("Thank you for visiting Sally's cafe");
+                Console.WriteLine("Thank you for visiting Sally's cafe!");
                 bb();
             }
         
@@ -684,7 +649,7 @@ namespace CInemaApp
             Console.WriteLine("[7] - Subscriptions");
             Console.WriteLine("[8] - Quit");
             STARS();
-            Console.WriteLine("Please choose an option to continue.");
+            Console.WriteLine("Please choose any option to continue");
 
             Choices();
 
@@ -702,7 +667,7 @@ namespace CInemaApp
         public static void bb()
         //works as a back button
         {
-            Console.WriteLine("To go back to the main menu, please press Enter.");
+            Console.WriteLine("To go back to the main menu, please press Enter");
             string key = Console.ReadLine();
 
             if (key == "" + "") //enter
@@ -712,13 +677,6 @@ namespace CInemaApp
 
         }
 
-        public static void Contact()
-        {
-            Console.WriteLine("CINEMAPP CONTACT INFO\n");
-            Console.WriteLine("Phone number: 06123456789");
-            Console.WriteLine("Email: cinemapp@hr.nl\n");
-            bb();
-        }
         public static void Current()
         {
             Console.WriteLine("Welcome to the current movies page!");
@@ -743,6 +701,13 @@ namespace CInemaApp
                 Console.WriteLine(Movies);
             bb();
         }
+
+        public static void Subprint()
+        {
+            string js = Directory.GetCurrentDirectory() + "/../../../subscription.json";
+            string s = File.ReadAllText(js);
+            Console.WriteLine(s);
+        }
         public static void Prices()
         {
             
@@ -757,7 +722,6 @@ namespace CInemaApp
                 {
                     Administrator testing = new Administrator();
                     string[] array = testing.Age_prices_array();
-                    System.Collections.Generic.List<string> Newarray_movie_times_and_location = testing.Times_and_dates();
                     
                     Globals.array = array;
                 }
@@ -772,14 +736,14 @@ namespace CInemaApp
                     var stringjson = JsonConvert.SerializeObject(testuser, Formatting.Indented);
 
 
-                    System.IO.File.WriteAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\json1.json", stringjson);
+                    File.WriteAllText(Directory.GetCurrentDirectory() + "/../../../json1.json", stringjson);
                 }
                 // needs t read from json file to print the information the user needs to see/ known problems does not print the times and date information
                 // still is unable to read from the json file
                 if (x == "3")
                 {
-                    Console.WriteLine("the prices are as follows:");
-                    string str = System.IO.File.ReadAllText(@"C:\Users\Acer\source\repos\json1.json");
+                    Console.WriteLine("The prices are as follows:");
+                    string str = System.IO.File.ReadAllText(Directory.GetCurrentDirectory() + "/../../../json1.json");
                     string[] sepparator = { "{", "Newarray", "[", "}", "]", ":", ",", "\"", "array_movie_times_and_location", "null" };
                     string[] stringlist = str.Split(sepparator, StringSplitOptions.RemoveEmptyEntries);
                     foreach (string s in stringlist)
@@ -793,14 +757,14 @@ namespace CInemaApp
                 }
                 else
                 {
-                    Console.WriteLine("input invalid please try again");
+                    Console.WriteLine("False input. Try again");
                     Prices();
                 }
             }
         }
         public static void Events()
         {
-            Console.WriteLine("Friday horror night all horror movies are 50% off TEEESSSSTTTTTTT");
+            Console.WriteLine("Friday horror night all horror movies are 50% off");
             Console.WriteLine("Saturday Family day every family that comes gain tickets for free food");
             Console.WriteLine("Sunday premiere night every Sunday night one or more of the upcoming movies will play for the first time");
             bb();
@@ -811,8 +775,8 @@ namespace CInemaApp
             Console.WriteLine("1) Display Food & Drink menu");
             Console.WriteLine("2) Display payment options");
             Console.WriteLine("3) Order from Food & Drink menu");
-            Console.WriteLine("4) Exit\n");
-            Console.Write("Please select your option. You can only choose 1, 2, 3 or 4 \n");
+            Console.WriteLine("4) Exit");
+            Console.WriteLine("Please select your option. You can only choose 1, 2, 3 or 4");
 
 
             switch (Console.ReadLine())
@@ -836,7 +800,7 @@ namespace CInemaApp
 
         public static void FoodDrinkMenu()
         {
-            Console.WriteLine("Welcome to Sally's. Prices are in $$$");
+            Console.WriteLine("Welcome to Sally's! Prices are in $$$");
             List<MenuItems> SubTotal = new List<MenuItems>();
             SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
             SubTotal.Add(new MenuItems() { Name = "Tea", Price = "2" });
@@ -858,17 +822,12 @@ namespace CInemaApp
             SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
             SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
 
-            string hi = Console.ReadLine();
-
-            var value = SubTotal.First(item => item.Name == hi).Price;
-            string total = value;
-
             foreach (MenuItems x in SubTotal)
             {
                 Console.WriteLine(x.getData());
             }
 
-            Console.WriteLine("Press Enter to order\n");
+            Console.WriteLine("Press any key to order");
             Console.ReadLine();
             OrderMenu();
 
@@ -878,14 +837,14 @@ namespace CInemaApp
         {
             Console.WriteLine("These are the following payment options\n");
             Console.WriteLine("1) IDEAL");
-            Console.WriteLine("2) Creditcard");
+            Console.WriteLine("2) Credit card");
 
         }
 
     public void Paymentsally()
     {
-        Console.WriteLine(" you will have to pay " + Globals.total);
-        Console.WriteLine("please choose your payment option! (type the number of your choice to choose)");
+        Console.WriteLine("You will have to pay " + Globals.total);
+        Console.WriteLine("Please choose your payment option");
         string c = "0";
         string s = "";
         int counter = 1;
@@ -910,18 +869,13 @@ namespace CInemaApp
             if (counter == 1)
             {
                 Console.WriteLine(s);
-                Console.WriteLine("   ideal option 1");
-            }
-            else if (counter == 2)
-            {
-                Console.WriteLine(s);
-                Console.WriteLine(" credit card option 2");
+                Console.WriteLine("   IDEAL (option 1)");
             }
             counter = counter + 1;
         }
 
         Console.WriteLine(s);
-        Console.WriteLine(" credit card option 2");
+        Console.WriteLine(" Credit card (option 2)");
         while (c != "4")
         {
             c = Console.ReadLine();
@@ -930,11 +884,11 @@ namespace CInemaApp
                 int d = 0;
                 while (d != 1)
                 {
-                    Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                    Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
                     string information = Console.ReadLine();
                     if (information.Length != 8)
                     {
-                        Console.WriteLine("please try again you seemed to have typed the wrong code");
+                        Console.WriteLine("Please try again, you seemed to have typed the wrong code");
                     }
                     else if (information.Length == 8)
                     {
@@ -948,11 +902,11 @@ namespace CInemaApp
                 int d = 0;
                 while (d != 1)
                 {
-                    Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                    Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
                     string information = Console.ReadLine();
                     if (information.Length != 8)
                     {
-                        Console.WriteLine("please try again you seemed to have typed the wrong code");
+                        Console.WriteLine("Please try again, you seemed to have typed the wrong code");
                     }
                     else if (information.Length == 8)
                     {
@@ -966,7 +920,7 @@ namespace CInemaApp
 
         }
         // shows final ticket and show the time and payment done.
-        string infopayed = " everything is payed ";
+        Console.WriteLine("Everything has been payed for");
     }
     public static void OrderMenu()
         {
@@ -994,7 +948,7 @@ namespace CInemaApp
 
             
 
-            Console.WriteLine("What would you like to Order?\n");
+            Console.WriteLine("What would you like to order?\n");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
             Console.WriteLine(Globals.total);
@@ -1029,14 +983,8 @@ namespace CInemaApp
 
         public static void Exit()
         {
-            Console.WriteLine("Thank you for visiting Sally's cafe");
+            Console.WriteLine("Thank you for visiting Sally's cafe!");
             bb();
-        }
-
-        public static string Read()
-        {
-            Console.WriteLine("Enter your selection please: \n");
-            return Console.ReadLine();
         }
 
         public static void addMovie()
@@ -1066,7 +1014,8 @@ namespace CInemaApp
             List<Movie> list = Data.LoadMovies();
             list.Add(movie1);
             var test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            File.WriteAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\movies.json", test);
+            string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            File.WriteAllText(js, test);
             bb();
         }
         public static void removeMovie()
@@ -1098,7 +1047,8 @@ namespace CInemaApp
             }
             // sends the data back to the json file
             var test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            File.WriteAllText(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\movies.json", test);
+            string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            File.WriteAllText(js, test);
             bb();
         }
 
@@ -1134,15 +1084,20 @@ namespace CInemaApp
                     break;
                 case "6":
                     STARS();
-                    Contact();
+                    User.Contact();
                     break;
                 case "7":
+                    STARS();
                     addMovie();
                     break;
                 case "8":
+                    STARS();
                     removeMovie();
                     break;
                 case "9":
+                    Subprint();
+                    break;
+                case "10":
                     Console.WriteLine("Goodbye.");
                     Environment.Exit(0);
                     break;
@@ -1164,7 +1119,8 @@ namespace CInemaApp
             Console.WriteLine("[6] - Contact Information");
             Console.WriteLine("[7] - Add Movie");
             Console.WriteLine("[8] - Remove movie");
-            Console.WriteLine("[9] - Quit");
+            Console.WriteLine("[9] - Subscriptions");
+            Console.WriteLine("[10] - Quit");
             STARS();
             Console.WriteLine("Please choose an option to continue.");
 
@@ -1188,7 +1144,7 @@ namespace CInemaApp
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
-                Login.Question();
+            Login.Question();
         }
     }
 
