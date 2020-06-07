@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
+using CinemaApp;
+
 
 namespace CInemaApp
 {
@@ -12,13 +14,14 @@ namespace CInemaApp
         public static string[] array;
         public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
         public static string answer;
+        public static string Moviename;
     }
 
     public class Paymentsystem
     {
-        public void Paymentoption()
+        public void Payment()
         {
-            Console.WriteLine("Please choose your payment option! (press a number to choose)");
+
             string c = "0";
             string s = "";
             int counter = 1;
@@ -211,11 +214,34 @@ namespace CInemaApp
         public static void Current()
         {
             Console.WriteLine("Welcome to the current movies page!");
+            List<Movie> list = Data.LoadMovies();
             for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
             {
-                Console.WriteLine(x + ": " + Data.LoadMovies()[x - 1].GetMovieName());
+                Console.WriteLine(x + " " + Data.LoadMovies()[x - 1].GetMovieName());
+
             }
-            bb();
+            Console.WriteLine("Enter the name of the movie you want to make an reservation: ");
+            string Moviename = Console.ReadLine();
+            bool found = false;
+            //goes through the whole json file
+            for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
+            {
+                
+                if (Moviename == Data.LoadMovies()[x - 1].GetMovieName())
+                {
+                    
+                    string seats = SeatingReservation.Seat();
+                    
+                    Console.WriteLine("you made an reservation for the film: " + Moviename + ", your seats are: " + seats);
+                    found = true;
+                }
+            }
+            if (found == false)
+            {
+                Console.WriteLine("Movie not found");
+            }
+                bb();
+            
         }
         public static void Upcoming()
         {
@@ -333,9 +359,66 @@ namespace CInemaApp
 
         public static void PaymentOption()
         {
-            Console.WriteLine("These are the following payment options\n");
-            Console.WriteLine("1) IDEAL");
-            Console.WriteLine("2) Creditcard");
+            string c = "0";
+            string s = "";
+            int counter = 1;
+            int options = 2;
+            int i;
+            int j;
+            int height = 9;
+            int width = 9;
+            while (counter < options)
+            {
+                for (i = 1; i <= height; i++)
+                {
+                    for (j = 1; j <= width; j++)
+                    {
+                        if (i == 1 || i == height || j == 1 || j == width)
+                            s = s + " *";
+                        else
+                            s = s + "  ";
+                    }
+                    s = s + "\n";
+                }
+                if (counter == 1)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine("   IDEAL option 1");
+                }
+                else if (counter == 2)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine(" Credit Card option 2");
+                }
+                counter = counter + 1;
+            }
+
+            Console.WriteLine(s);
+            Console.WriteLine(" Credit Card option 2");
+            while (c != "4")
+            {
+                c = Console.ReadLine();
+                if (c == "1")
+                {
+                    Console.WriteLine("Please enter your IDEAL information");
+                    User.STARS();
+                    string information = Console.ReadLine();
+                    string x = "5";
+                    c = "4";
+                }
+                if (c == "2")
+                {
+                    Console.WriteLine("Please enter your Credit Card information");
+                    User.STARS();
+                    string information = Console.ReadLine();
+
+                    c = "4";
+                }
+
+
+            }
+            // shows final ticket and show the time and payment done.
+            string infopayed = " Payment completed";
 
         }
 
@@ -840,7 +923,8 @@ namespace CInemaApp
                 Console.BackgroundColor = color;
                 Console.WriteLine($"Background color set to {color}");
             }*/
-            Console.BackgroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
                 Login.Question();
         }
