@@ -691,7 +691,8 @@ namespace CInemaApp
             Console.WriteLine("[4] - Events");
             Console.WriteLine("[5] - Sally's Café");
             Console.WriteLine("[6] - Contact Information");
-            Console.WriteLine("[7] - Quit");
+            Console.WriteLine("[7] - Subscriptions");
+            Console.WriteLine("[8] - Quit");
             STARS();
             Console.WriteLine("Please choose an option to continue.");
 
