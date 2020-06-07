@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
 using CinemaApp;
-
+using CInemaApp;
 
 namespace CInemaApp
 {
@@ -12,16 +12,124 @@ namespace CInemaApp
     public class Globals
     {
         public static string[] array;
-        public static System.Collections.Generic.List<string> Newarray_movie_times_and_location;
-        public static string answer;
         public static string Moviename;
     }
 
     public class Paymentsystem
     {
+        public void PaymentOption()
+        { 
+            
+            string output = "";
+            int counter = 0;
+            int x = 3 + 1;
+            int i = 0;
+            int price = 0;
+            while (i < x)
+            {
+
+
+                Console.WriteLine("please tell us the ages of the group of visitors.");
+                Console.WriteLine("(type 1 if you are below 12 years old.\n2 if you are between 12 and 26.\n3 if you are between 27 and 50.\n4 if you are 50 +.)\nplease repeat this for each groupmember.");
+ 
+                string agegroup = Console.ReadLine();
+                int j = 0;
+                while (j < 1)
+                {
+                    if (x > 1)
+                    {
+
+                        
+                        if (agegroup == "1")
+                        {
+                            Console.WriteLine("here");
+                            
+                            
+                            counter = counter + 1;
+                            string response = "this is group member " + counter + " ";
+                            output = output + " " + response + "and is below 12 years old. "; 
+                            
+                            j++;
+                        }
+                        if (agegroup == "2")
+                        {
+                            Console.WriteLine("here");
+                            
+                            counter = counter + 1;
+                            string response = "this is group member " + counter + " ";
+                            output = output + " " + response + "and is between 12 and 26 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "3")
+                        {
+                            Console.WriteLine("here");
+                            
+                            counter = counter + 1;
+                            string response = "this is group member " + counter + " ";
+                            output = output + " " + response + "and is between 27 and 50 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "4")
+                        {
+                            Console.WriteLine("here");
+                            
+                            counter = counter + 1;
+                            string response = "this is group member " + counter + " ";
+                            output = output + " " + response + "and is 50+. ";
+                            j++;
+                        }
+                    }
+                    i++;
+                    if (x == 1)
+                    {
+                        if (agegroup == "1")
+                        {
+                            
+                            Console.WriteLine("here");
+                            
+                            counter = counter + 1;
+                            string response = "you are ";
+                            output = output + " " + response + "and you are below 12 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "2")
+                        {
+                            Console.WriteLine("here");
+                            
+                            counter = counter + 1;
+                            string response = "you are ";
+                            output = output + " " + response + "and you are between 12 and 26 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "3")
+                        {
+                            Console.WriteLine("here");
+                            
+                            counter = counter + 1;
+                            string response = "you are ";
+                            output = output + " " + response + "and you are between 27 and 50 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "4")
+                        {
+                            Console.WriteLine("here");
+                            
+                            counter = counter + 1;
+                            string response = "you are ";
+                            output = output + " " + response + "and you are 50+. ";
+                            j++;
+                        }
+                    }
+                    i++;
+                }
+
+            }
+            Payment();
+        }
         public void Payment()
         {
 
+            Console.WriteLine("please choose your payment option! (type the number of your choice to choose)");
             string c = "0";
             string s = "";
             int counter = 1;
@@ -46,46 +154,68 @@ namespace CInemaApp
                 if (counter == 1)
                 {
                     Console.WriteLine(s);
-                    Console.WriteLine("   IDEAL option 1");
+                    Console.WriteLine("   ideal option 1");
                 }
                 else if (counter == 2)
                 {
                     Console.WriteLine(s);
-                    Console.WriteLine(" Credit Card option 2");
+                    Console.WriteLine(" credit card option 2");
                 }
                 counter = counter + 1;
             }
 
             Console.WriteLine(s);
-            Console.WriteLine(" Credit Card option 2");
+            Console.WriteLine(" credit card option 2");
             while (c != "4")
             {
                 c = Console.ReadLine();
                 if (c == "1")
                 {
-                    Console.WriteLine("Please enter your IDEAL information");
-                    User.STARS();
-                    string information = Console.ReadLine();
-                    string x = "5";
-                    c = "4";
+                    int d = 0;
+                    while (d != 1)
+                    {
+                        Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                        string information = Console.ReadLine();
+                        if (information.Length != 8)
+                        {
+                            Console.WriteLine("please try again you seemed to have typed the wrong code");
+                        }
+                        else if (information.Length == 8)
+                        {
+                            c = "4";
+                            d = 1;
+                        }
+                    }
                 }
                 if (c == "2")
                 {
-                    Console.WriteLine("Please enter your Credit Card information");
-                    User.STARS();
-                    string information = Console.ReadLine();
+                    int d = 0;
+                    while (d != 1)
+                    {
+                        Console.WriteLine("please enter your Ideal information, 8 digit code\n *********************");
+                        string information = Console.ReadLine();
+                        if (information.Length != 8)
+                        {
+                            Console.WriteLine("please try again you seemed to have typed the wrong code");
+                        }
+                        else if (information.Length == 8)
+                        {
+                            c = "4";
+                            d = 1;
+                        }
 
-                    c = "4";
+                    }
                 }
 
 
             }
             // shows final ticket and show the time and payment done.
-            string infopayed = " Payment completed";
-
-
-
+            string infopayed = " everything is payed ";
         }
+
+
+
+    }
         // administrator class so the administrator can use specific functions and add data needed in the application
 
         // the 'login screen' that asks whether the current user is an admin or not
@@ -171,7 +301,7 @@ namespace CInemaApp
             User.STARS();
             Console.WriteLine("Are you an Admin or User? [A/U]");
             string Answer = Console.ReadLine();
-            Globals.answer = Answer;
+            
 
             //StringComparison.OrdinalIgnoreCase makes sure that the answer gets through despite it being upper or lower case
             //Answer.Equals is the same as Answer = "U"
@@ -606,7 +736,7 @@ namespace CInemaApp
                     Administrator testing = new Administrator();
                     string[] array = testing.Age_prices_array();
                     System.Collections.Generic.List<string> Newarray_movie_times_and_location = testing.Times_and_dates();
-                    Globals.Newarray_movie_times_and_location = Newarray_movie_times_and_location;
+                    
                     Globals.array = array;
                 }
                 if (x == "2")
@@ -616,7 +746,7 @@ namespace CInemaApp
 
                     testuser.Newarray = Globals.array;
 
-                    testuser.array_movie_times_and_location = Globals.Newarray_movie_times_and_location;
+                   
                     var stringjson = JsonConvert.SerializeObject(testuser, Formatting.Indented);
 
 
@@ -929,7 +1059,6 @@ namespace CInemaApp
                 Login.Question();
         }
     }
-}
 
 
              
