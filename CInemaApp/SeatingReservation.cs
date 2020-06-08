@@ -20,6 +20,8 @@ namespace CinemaApp
             List<int> chosen_seat = new List<int>();
             int c = 0;
             string s = "";
+            int Group = 1;
+            Globals.group = Group;
 
 
             if (movieHall == 1)
@@ -98,12 +100,13 @@ namespace CinemaApp
             {       
                 seatSelection();
                 e += 1;
+                Group = Group + 1;
+                Globals.group = Group;
                 Console.WriteLine("Type OK to confirm reservation, type anything else to select a different seat.");
 
     
             }
             //Admin.bb();
-            
             foreach (var sublist in reservation)
             {
                 foreach (var value in sublist)
@@ -127,7 +130,7 @@ namespace CinemaApp
                 Console.WriteLine();
                 break;
             }
-
+            User.PaymentOption();
             return s;
         }
     }

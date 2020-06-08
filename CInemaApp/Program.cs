@@ -15,197 +15,9 @@ namespace CInemaApp
         public static string[] array;
         public static string Moviename;
         public static string total;
-
-
-    public class Paymentsystem
-    {
-        public void PaymentOption()
-        { 
-            
-            string output = "";
-            int counter = 0;
-            int x = 3 + 1;
-            int i = 0;
-            while (i < x)
-            {
-
-
-                Console.WriteLine("Please choose your age group");
-                Console.WriteLine("Press 1 if you are below 12 years old\nPress 2 if you are between 12 and 26 years old\nPress 3 if you are between 27 and 50 years old\nPress 4 if you are 50 years or older");
- 
-                string agegroup = Console.ReadLine();
-                int j = 0;
-                while (j < 1)
-                {
-                    if (x > 1)
-                    {
-
-                        
-                        if (agegroup == "1")
-                        {
-                               
-                            counter = counter + 1;
-                            string response = "This is group member " + counter + " ";
-                            output = output + " " + response + "and is below 12 years old. "; 
-                            
-                            j++;
-                        }
-                        if (agegroup == "2")
-                        {
-                            
-                            counter = counter + 1;
-                            string response = "This is group member " + counter + " ";
-                            output = output + " " + response + "and is between 12 and 26 years old. ";
-                            j++;
-                        }
-                        if (agegroup == "3")
-                        {
-                            
-                            counter = counter + 1;
-                            string response = "This is group member " + counter + " ";
-                            output = output + " " + response + "and is between 27 and 50 years old. ";
-                            j++;
-                        }
-                        if (agegroup == "4")
-                        {
-                            
-                            counter = counter + 1;
-                            string response = "This is group member " + counter + " ";
-                            output = output + " " + response + "and is 50 years or older. ";
-                            j++;
-                        }
-                    }
-                    i++;
-                    if (x == 1)
-                    {
-                        if (agegroup == "1")
-                        {
-                            
-                            counter = counter + 1;
-                            string response = "You are ";
-                            output = output + " " + response + "and you are below 12 years old. ";
-                            j++;
-                        }
-                        if (agegroup == "2")
-                        {
-                            
-                            counter = counter + 1;
-                            string response = "You are ";
-                            output = output + " " + response + "and you are between 12 and 26 years old. ";
-                            j++;
-                        }
-                        if (agegroup == "3")
-                        {
-                            
-                            counter = counter + 1;
-                            string response = "You are ";
-                            output = output + " " + response + "and you are between 27 and 50 years old. ";
-                            j++;
-                        }
-                        if (agegroup == "4")
-                        {
-                            
-                            counter = counter + 1;
-                            string response = "You are ";
-                            output = output + " " + response + "and you are 50 years or older. ";
-                            j++;
-                        }
-                    }
-                    i++;
-                }
-
-            }
-            Payment();
-        }
-        public void Payment()
-        {
-
-            Console.WriteLine("Please choose a payment option");
-            string c = "0";
-            string s = "";
-            int counter = 1;
-            int options = 2;
-            int i;
-            int j;
-            int height = 9;
-            int width = 9;
-            while (counter < options)
-            {
-                for (i = 1; i <= height; i++)
-                {
-                    for (j = 1; j <= width; j++)
-                    {
-                        if (i == 1 || i == height || j == 1 || j == width)
-                            s = s + " *";
-                        else
-                            s = s + "  ";
-                    }
-                    s = s + "\n";
-                }
-                if (counter == 1)
-                {
-                    Console.WriteLine(s);
-                    Console.WriteLine("   IDEAL (option 1)");
-                }
-                counter = counter + 1;
-            }
-
-            Console.WriteLine(s);
-            Console.WriteLine(" Credit Card (option 2)");
-            while (c != "4")
-            {
-                c = Console.ReadLine();
-                if (c == "1")
-                {
-                    int d = 0;
-                    while (d != 1)
-                    {
-                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
-                        string information = Console.ReadLine();
-                        if (information.Length != 8)
-                        {
-                            Console.WriteLine("Please try again, you seemed to have typed the wrong code");
-                        }
-                        else if (information.Length == 8)
-                        {
-                            c = "4";
-                            d = 1;
-                        }
-                    }
-                }
-                if (c == "2")
-                {
-                    int d = 0;
-                    while (d != 1)
-                    {
-                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
-                        string information = Console.ReadLine();
-                        if (information.Length != 8)
-                        {
-                            Console.WriteLine("Please try again you seemed to have typed the wrong code");
-                        }
-                        else if (information.Length == 8)
-                        {
-                            c = "4";
-                            d = 1;
-                        }
-
-                        }
-                    }
-
-
-            }
-            // shows final ticket and show the time and payment done.
-            Console.WriteLine("Everything has been payed for");
-        }
-
-
-
+        public static int group;
     }
-        // administrator class so the administrator can use specific functions and add data needed in the application
 
-        // the 'login screen' that asks whether the current user is an admin or not
-    }
 
     public class Administrator
     {
@@ -294,6 +106,189 @@ namespace CInemaApp
             else
                 bb();
 
+        }
+
+        public static void PaymentOption()
+        {
+
+            string output = "";
+            int counter = 0;
+            int x = Globals.group;
+            Console.WriteLine(x);
+            int i = 0;
+            while (i < x)
+            {
+
+
+                Console.WriteLine("Please choose your age group");
+                Console.WriteLine("Press 1 if you are below 12 years old\nPress 2 if you are between 12 and 26 years old\nPress 3 if you are between 27 and 50 years old\nPress 4 if you are 50 years or older");
+
+                string agegroup = Console.ReadLine();
+                int j = 0;
+                while (j < 1)
+                {
+                    if (x > 1)
+                    {
+
+
+                        if (agegroup == "1")
+                        {
+
+                            counter = counter + 1;
+                            string response = "This is group member " + counter + " ";
+                            output = output + " " + response + "and is below 12 years old. ";
+
+                            j++;
+                        }
+                        if (agegroup == "2")
+                        {
+
+                            counter = counter + 1;
+                            string response = "This is group member " + counter + " ";
+                            output = output + " " + response + "and is between 12 and 26 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "3")
+                        {
+
+                            counter = counter + 1;
+                            string response = "This is group member " + counter + " ";
+                            output = output + " " + response + "and is between 27 and 50 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "4")
+                        {
+
+                            counter = counter + 1;
+                            string response = "This is group member " + counter + " ";
+                            output = output + " " + response + "and is 50 years or older. ";
+                            j++;
+                        }
+                    }
+                    i++;
+                    if (x == 1)
+                    {
+                        if (agegroup == "1")
+                        {
+
+                            counter = counter + 1;
+                            string response = "You are ";
+                            output = output + " " + response + "and you are below 12 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "2")
+                        {
+
+                            counter = counter + 1;
+                            string response = "You are ";
+                            output = output + " " + response + "and you are between 12 and 26 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "3")
+                        {
+
+                            counter = counter + 1;
+                            string response = "You are ";
+                            output = output + " " + response + "and you are between 27 and 50 years old. ";
+                            j++;
+                        }
+                        if (agegroup == "4")
+                        {
+
+                            counter = counter + 1;
+                            string response = "You are ";
+                            output = output + " " + response + "and you are 50 years or older. ";
+                            j++;
+                        }
+                    i++;
+                    }
+                    
+                }
+
+            }
+            Payment();
+        }
+        public static void Payment()
+        {
+            Console.WriteLine("We want to ask you to pay for the reservation of the movie: " + Globals.Moviename);
+            Console.WriteLine("We are calculating your Bill");
+            Console.WriteLine("Please choose a payment option");
+            string c = "0";
+            string s = "";
+            int counter = 1;
+            int options = 2;
+            int i;
+            int j;
+            int height = 9;
+            int width = 9;
+            while (counter < options)
+            {
+                for (i = 1; i <= height; i++)
+                {
+                    for (j = 1; j <= width; j++)
+                    {
+                        if (i == 1 || i == height || j == 1 || j == width)
+                            s = s + " *";
+                        else
+                            s = s + "  ";
+                    }
+                    s = s + "\n";
+                }
+                if (counter == 1)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine("   IDEAL (option 1)");
+                }
+                counter = counter + 1;
+            }
+
+            Console.WriteLine(s);
+            Console.WriteLine(" Credit Card (option 2)");
+            while (c != "4")
+            {
+                c = Console.ReadLine();
+                if (c == "1")
+                {
+                    int d = 0;
+                    while (d != 1)
+                    {
+                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        string information = Console.ReadLine();
+                        if (information.Length != 8)
+                        {
+                            Console.WriteLine("Please try again, you seemed to have typed the wrong code");
+                        }
+                        else if (information.Length == 8)
+                        {
+                            c = "4";
+                            d = 1;
+                        }
+                    }
+                }
+                if (c == "2")
+                {
+                    int d = 0;
+                    while (d != 1)
+                    {
+                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        string information = Console.ReadLine();
+                        if (information.Length != 8)
+                        {
+                            Console.WriteLine("Please try again you seemed to have typed the wrong code");
+                        }
+                        else if (information.Length == 8)
+                        {
+                            c = "4";
+                            d = 1;
+                        }
+
+                    }
+                }
+
+
+            }
+            // shows final ticket and show the time and payment done.
+            Console.WriteLine("Everything has been payed for");
         }
 
         public static void Contact()
