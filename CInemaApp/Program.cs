@@ -16,26 +16,6 @@ namespace CInemaApp
         public static string Moviename;
         public static string total;
 
-        public static void Dire()
-        {
-            string path = Directory.GetCurrentDirectory();
-            string target = @"c:\movies.json";
-            if (!Directory.Exists(target))
-            {
-                Directory.CreateDirectory(target);
-            }
-
-            // Change the current directory.
-            Environment.CurrentDirectory = (target);
-            if (path.Equals(Directory.GetCurrentDirectory()))
-            {
-                Console.WriteLine("You are in the temp directory.");
-            }
-            else
-            {
-                Console.WriteLine("You are not in the temp directory.");
-            }
-        }
 
     public class Paymentsystem
     {
@@ -368,7 +348,7 @@ namespace CInemaApp
 
             foreach (var movie in Movies)
 
-                Console.WriteLine(Movies);
+                Console.WriteLine(movie);
         }
         public static void Prices()
         {
@@ -395,7 +375,7 @@ namespace CInemaApp
                     //    Console.WriteLine(x + ": " + Dataprices.LoadPrices()[d - 1].Getmovietime());
                     //}
                 }
-                if (x == "2")
+                else if (x == "2")
                 {
 
                     bb();
@@ -435,13 +415,29 @@ namespace CInemaApp
                 var mail = Console.ReadLine();
 
                 var every = fname + " " + sname + ", " + age + ", " + mail;
+                List<string> sublist = new List<string>();
+                sublist.Add(every);
 
                 //Write to json file
-                string file = JsonConvert.SerializeObject(every, Formatting.Indented);
+                string file = JsonConvert.SerializeObject(sublist, Formatting.Indented);
 
                 string js = Directory.GetCurrentDirectory() + "/../../../sub.json";
                 File.AppendAllText(js, file);
-        }
+
+                Console.WriteLine("Press any key to go back to the subscription page");
+                var back = Console.ReadLine();
+
+                if (back == "A")
+                {
+                    STARS();
+                    Subscription();
+                }
+                else
+                {
+                    STARS();
+                    Subscription();
+                }
+            }
                 
 
             else if (sub.Equals("I", StringComparison.OrdinalIgnoreCase))
@@ -725,7 +721,7 @@ namespace CInemaApp
 
             foreach (var movie in Movies)
 
-                Console.WriteLine(Movies);
+                Console.WriteLine(movie);
             bb();
         }
 
@@ -764,14 +760,12 @@ namespace CInemaApp
 
                     string js3 = Directory.GetCurrentDirectory() + "/../../../json1.json";
                     File.AppendAllText(js3, stringjson);
-                //File.WriteAllText(Directory.GetCurrentDirectory() + "/../../../json1.json", stringjson);
             }
                 // needs t read from json file to print the information the user needs to see/ known problems does not print the times and date information
                 // still is unable to read from the json file
                 else if (x == "3")
                 {
                     Console.WriteLine("The prices are as follows:");
-                    //string str = System.IO.File.ReadAllText(Directory.GetCurrentDirectory() + "/../../../json1.json");
 
                     string str = File.ReadAllText(Directory.GetCurrentDirectory() + "/../../../json1.json");
 
@@ -1047,9 +1041,7 @@ namespace CInemaApp
             list.Add(movie1);
 
             string test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            //string js2 = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            //File.AppendAllText(js2, test);
-            //var test = JsonConvert.SerializeObject(list, Formatting.Indented);
+
             string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
             File.WriteAllText(js, test);
             bb();
@@ -1084,9 +1076,7 @@ namespace CInemaApp
             // sends the data back to the json file
 
             string test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            //string js4 = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            //File.AppendAllText(js4, test);
-            //var test = JsonConvert.SerializeObject(list, Formatting.Indented);
+
             string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
             File.WriteAllText(js, test);
             bb();

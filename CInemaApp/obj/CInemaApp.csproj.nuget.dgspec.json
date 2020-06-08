@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {}
+    "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {
+    "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+        "projectUniqueName": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
         "projectName": "CInemaApp",
-        "projectPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
-        "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\obj\\",
+        "projectPath": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+        "packagesPath": "C:\\Users\\babyg\\.nuget\\packages\\",
+        "outputPath": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\babyg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +58,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.0.2, 3.0.2]"
+              "version": "[3.0.3, 3.0.3]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
@@ -76,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
