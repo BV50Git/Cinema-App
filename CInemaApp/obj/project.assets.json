@@ -52,19 +52,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Roomy\\.nuget\\packages\\": {}
+    "C:\\Users\\jeroe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "projectUniqueName": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
       "projectName": "CInemaApp",
-      "projectPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
-      "packagesPath": "C:\\Users\\Roomy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Roomy\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
+      "projectPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+      "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jeroe\\source\\repos\\Cinema-App\\CInemaApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Roomy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -110,7 +110,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.0.3, 3.0.3]"
+            "version": "[3.0.2, 3.0.2]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
@@ -126,7 +126,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,11 +1,5 @@
 [
   {
-    "name": "hgfjhf",
-    "description": "hooi",
-    "duration": 10,
-    "genre": null
-  },
-  {
     "name": "lord of the rings",
     "description": "hooi",
     "duration": 10,
@@ -28,5 +22,11 @@
     "description": "it's about a friendship between a dwarf and a elf and something about a ring",
     "duration": 360,
     "genre": "fantasy"
+  },
+  {
+    "name": "batman",
+    "description": "a bat who is a man",
+    "duration": 50,
+    "genre": "comedy"
   }
 ]
