@@ -26,7 +26,6 @@ namespace CInemaApp
             int counter = 0;
             int x = 3 + 1;
             int i = 0;
-            int price = 0;
             while (i < x)
             {
 
@@ -419,9 +418,10 @@ namespace CInemaApp
 
                 //Write to json file
                 string file = JsonConvert.SerializeObject(every, Formatting.Indented);
-                File.AppendAllText("subscriptions.json", file);
-                Console.WriteLine("You have been subscribed!");
-            }
+
+                string js = Directory.GetCurrentDirectory() + "/../../../sub.json";
+                File.AppendAllText(js, file);
+        }
                 
 
             else if (sub.Equals("I", StringComparison.OrdinalIgnoreCase))
@@ -704,9 +704,10 @@ namespace CInemaApp
 
         public static void Subprint()
         {
-            string js = Directory.GetCurrentDirectory() + "/../../../subscription.json";
+            string js = Directory.GetCurrentDirectory() + "/../../../sub.json";
             string s = File.ReadAllText(js);
-            Console.WriteLine(s);
+            Console.WriteLine("These are the current subscribers:\n" + s);
+            bb();
         }
         public static void Prices()
         {
@@ -725,25 +726,28 @@ namespace CInemaApp
                     
                     Globals.array = array;
                 }
-                if (x == "2")
+                else if (x == "2")
                 // option to write information into the json file
                 {
                     Costumer testuser = new Costumer();
 
                     testuser.Newarray = Globals.array;
 
-                   
-                    var stringjson = JsonConvert.SerializeObject(testuser, Formatting.Indented);
+                    string stringjson = JsonConvert.SerializeObject(testuser, Formatting.Indented);
 
-
-                    File.WriteAllText(Directory.GetCurrentDirectory() + "/../../../json1.json", stringjson);
-                }
+                    string js3 = Directory.GetCurrentDirectory() + "/../../../json1.json";
+                    File.AppendAllText(js3, stringjson);
+                //File.WriteAllText(Directory.GetCurrentDirectory() + "/../../../json1.json", stringjson);
+            }
                 // needs t read from json file to print the information the user needs to see/ known problems does not print the times and date information
                 // still is unable to read from the json file
-                if (x == "3")
+                else if (x == "3")
                 {
                     Console.WriteLine("The prices are as follows:");
-                    string str = System.IO.File.ReadAllText(Directory.GetCurrentDirectory() + "/../../../json1.json");
+                    //string str = System.IO.File.ReadAllText(Directory.GetCurrentDirectory() + "/../../../json1.json");
+
+                    string str = File.ReadAllText(Directory.GetCurrentDirectory() + "/../../../json1.json");
+
                     string[] sepparator = { "{", "Newarray", "[", "}", "]", ":", ",", "\"", "array_movie_times_and_location", "null" };
                     string[] stringlist = str.Split(sepparator, StringSplitOptions.RemoveEmptyEntries);
                     foreach (string s in stringlist)
@@ -751,7 +755,7 @@ namespace CInemaApp
                         Console.WriteLine(s);
                     }
                 }
-                if (x == "4") {
+                else if (x == "4") {
                     bb();
                     x = "4";
                 }
@@ -993,9 +997,10 @@ namespace CInemaApp
             string filmname = Console.ReadLine();
             
             
-            //goes through the whole json file
+            //goes through the whole json file #code crashes here
             for (int x = 1; x < Data.LoadMovies().Count + 1; x++)
             {
+                
                 // removes a movie if it found a name with the same input
                 if (filmname == Data.LoadMovies()[x - 1].GetMovieName())
                 {
@@ -1013,9 +1018,13 @@ namespace CInemaApp
             Movie movie1 = new Movie(filmname, description, duration, genre); // new object
             List<Movie> list = Data.LoadMovies();
             list.Add(movie1);
-            var test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            File.WriteAllText(js, test);
+
+            string test = JsonConvert.SerializeObject(list, Formatting.Indented);
+            string js2 = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            File.AppendAllText(js2, test);
+            //var test = JsonConvert.SerializeObject(list, Formatting.Indented);
+            //string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            //File.WriteAllText(js, test);
             bb();
         }
         public static void removeMovie()
@@ -1046,9 +1055,13 @@ namespace CInemaApp
                 Console.WriteLine("Movie not found");
             }
             // sends the data back to the json file
-            var test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            File.WriteAllText(js, test);
+
+            string test = JsonConvert.SerializeObject(list, Formatting.Indented);
+            string js4 = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            File.AppendAllText(js4, test);
+            //var test = JsonConvert.SerializeObject(list, Formatting.Indented);
+            //string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            //File.WriteAllText(js, test);
             bb();
         }
 
