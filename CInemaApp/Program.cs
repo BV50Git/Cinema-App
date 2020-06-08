@@ -1047,11 +1047,11 @@ namespace CInemaApp
             list.Add(movie1);
 
             string test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            string js2 = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            File.AppendAllText(js2, test);
+            //string js2 = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            //File.AppendAllText(js2, test);
             //var test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            //string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            //File.WriteAllText(js, test);
+            string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            File.WriteAllText(js, test);
             bb();
         }
         public static void removeMovie()
@@ -1084,11 +1084,11 @@ namespace CInemaApp
             // sends the data back to the json file
 
             string test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            string js4 = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            File.AppendAllText(js4, test);
+            //string js4 = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            //File.AppendAllText(js4, test);
             //var test = JsonConvert.SerializeObject(list, Formatting.Indented);
-            //string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
-            //File.WriteAllText(js, test);
+            string js = Directory.GetCurrentDirectory() + "/../../../movies.json";
+            File.WriteAllText(js, test);
             bb();
         }
 
