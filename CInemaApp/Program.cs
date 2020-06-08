@@ -349,6 +349,7 @@ namespace CInemaApp
             foreach (var movie in Movies)
 
                 Console.WriteLine(movie);
+            bb();
         }
         public static void Prices()
         {
