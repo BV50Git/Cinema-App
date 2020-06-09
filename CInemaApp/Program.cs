@@ -386,9 +386,44 @@ namespace CInemaApp
         }
         public static void Events()
         {
-            Console.WriteLine("Friday horror night all horror movies are 50% off");
-            Console.WriteLine("Saturday Family day every familiy that comes gain tickets for free food");
-            Console.WriteLine("Sunday premiere night every Sunday night one or more of the upcoming movies will play for the first time");
+            STARS();
+            Console.WriteLine("Welcome to the Events page!");
+            Console.WriteLine("For our COVID-19 Regulations please press 'C'\nFor our regularly scheduled events press 'E'");
+            var ev = Console.ReadLine();
+
+            if (ev.Equals("C", StringComparison.OrdinalIgnoreCase))
+            {
+                STARS();
+                Console.WriteLine("Due to the current circumstances and the social distancing order, Cinemapps has unfortunately had to" +
+                    " close their doors for a short while.");
+                Console.WriteLine("However, since reopening we have been trying our hardest to get back to how things used to be," +
+                    " with some added changes to uphold the new rules.\n\nAs such, we've had to remove some of our previous events" +
+                    " and swap them out in favor of new ones that don't put a lot of people at risk. ");
+                Console.WriteLine("We are sorry for the inconvenience and hope for your understanding.");
+                
+                Console.WriteLine("Press any key to go back to the Events page");
+                Console.ReadLine();
+                Events();
+               
+            }
+
+            else if (ev.Equals("E", StringComparison.OrdinalIgnoreCase))
+            {
+                STARS();
+                Console.WriteLine("Current ongoing events:");
+                Console.WriteLine("Friday - 'Horror Movie Night!'\n     All horror movies will be available to watch for 50% off " +
+                    "during this event!");
+                Console.WriteLine("Saturday - 'Family Day!'\n     Each family that arrives at our cinema gets a " +
+                    "free ticket to spend on food and beverages as they like!");
+                Console.WriteLine("Sunday - 'Premiere Night!'\n     On this day, one or more movies from the " +
+                    "'Upcoming Movies' list will be shown for the first time in our cinema! Don't miss it!");
+            }
+
+            else
+            {
+                Console.WriteLine("False input. Try again");
+                Events();
+            }
             bb();
         }
 
