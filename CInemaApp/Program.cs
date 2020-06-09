@@ -690,7 +690,8 @@ namespace CInemaApp
             if (true == (MenuItems.Contains(message)))
                 Console.WriteLine("You have succesfully ordered " + message);
 
-            else 
+            else
+                Console.WriteLine("We don't seem to have that in our store, please try again.");
                 OrderMenu();
 
             List<MenuItems> SubTotal = new List<MenuItems>();
@@ -894,6 +895,7 @@ namespace CInemaApp
 
                     string js3 = Directory.GetCurrentDirectory() + "/../../../json1.json";
                     File.AppendAllText(js3, stringjson);
+                    Console.WriteLine("Saved");
             }
                 // needs t read from json file to print the information the user needs to see/ known problems does not print the times and date information
                 // still is unable to read from the json file
@@ -1116,6 +1118,7 @@ namespace CInemaApp
                 Console.WriteLine("You have succesfully ordered " + message);
 
             else
+                Console.WriteLine("We don't seem to have that in our store, please try again.");
                 OrderMenu();
 
             List<MenuItems> SubTotal = new List<MenuItems>();
