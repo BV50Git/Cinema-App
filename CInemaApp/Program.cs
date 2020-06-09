@@ -539,6 +539,87 @@ namespace CInemaApp
         Console.WriteLine("2) Credit card");
 
         }
+        public static void Paymentsally()
+        {
+            Console.WriteLine("You will have to pay " + Globals.total);
+            Console.WriteLine("Please choose your payment option");
+            string c = "0";
+            string s = "";
+            int counter = 1;
+            int options = 2;
+            int i;
+            int j;
+            int height = 9;
+            int width = 9;
+            while (counter < options)
+            {
+                for (i = 1; i <= height; i++)
+                {
+                    for (j = 1; j <= width; j++)
+                    {
+                        if (i == 1 || i == height || j == 1 || j == width)
+                            s = s + " *";
+                        else
+                            s = s + "  ";
+                    }
+                    s = s + "\n";
+                }
+                if (counter == 1)
+                {
+                    Console.WriteLine(s);
+                    Console.WriteLine("   IDEAL (option 1)");
+                }
+                counter = counter + 1;
+            }
+
+            Console.WriteLine(s);
+            Console.WriteLine(" Credit card (option 2)");
+            while (c != "4")
+            {
+                c = Console.ReadLine();
+                if (c == "1")
+                {
+                    int d = 0;
+                    while (d != 1)
+                    {
+                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        string information = Console.ReadLine();
+                        if (information.Length != 8)
+                        {
+                            Console.WriteLine("Please try again, you seemed to have typed the wrong code");
+                        }
+                        else if (information.Length == 8)
+                        {
+                            c = "4";
+                            d = 1;
+                        }
+                    }
+                }
+                if (c == "2")
+                {
+                    int d = 0;
+                    while (d != 1)
+                    {
+                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        string information = Console.ReadLine();
+                        if (information.Length != 8)
+                        {
+                            Console.WriteLine("Please try again, you seemed to have typed the wrong code");
+                        }
+                        else if (information.Length == 8)
+                        {
+                            c = "4";
+                            d = 1;
+                        }
+
+                    }
+                }
+
+
+            }
+            // shows final ticket and show the time and payment done.
+            Console.WriteLine("Everything has been payed for");
+        }
 
         public static void OrderMenu()
         {
@@ -568,21 +649,23 @@ namespace CInemaApp
             Console.WriteLine("What would you like to order?");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
-            Console.WriteLine(Globals.total);
 
 
             if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message + "! Your total is $" + Globals.total);
+                Console.WriteLine("You have succesfully ordered " + message);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
+
             string messages = Console.ReadLine();
-
             if (true == (MenuItems.Contains(messages)))
-                Console.WriteLine("You have succesfully ordered " + messages + " Your total is $" + Globals.total);
+                Console.WriteLine("You have succesfully ordered \n" + messages);
 
-            else
-                Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit");
+            if (false == (MenuItems.Contains(messages)))
+                Console.WriteLine("Press any key..\n");
+
+            Paymentsally();
+
         }
         public class MenuItems
         {
@@ -847,6 +930,10 @@ namespace CInemaApp
             {
                 Console.WriteLine(x.getData());
             }
+            //string file = JsonConvert.SerializeObject(SubTotal, Formatting.Indented);
+            //string js = Directory.GetCurrentDirectory() + "/../../../products.json";
+            
+
 
             Console.WriteLine("Press any key to order");
             Console.ReadLine();
@@ -860,9 +947,10 @@ namespace CInemaApp
             Console.WriteLine("1) IDEAL");
             Console.WriteLine("2) Credit card");
 
+
         }
 
-    public void Paymentsally()
+    public static void Paymentsally()
     {
         Console.WriteLine("You will have to pay " + Globals.total);
         Console.WriteLine("Please choose your payment option");
@@ -976,21 +1064,21 @@ namespace CInemaApp
 
 
             if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message + " Your total is $" + Globals.total);
+                Console.WriteLine("You have succesfully ordered " + message);
 
             else
                 Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
-
-            string messages = Console.ReadLine();
-            if (true == (MenuItems.Contains(messages)))
-                Console.WriteLine("You have succesfully ordered " + messages + " Your total is $" + Globals.total);
                 
-            else
-                Console.WriteLine("Your choice has not been found in the menu..\n Press any key to exit\n");
+            string messages = Console.ReadLine();
+                if (true == (MenuItems.Contains(messages)))
+                    Console.WriteLine("You have succesfully ordered " + messages);
+                
+                if (false == (MenuItems.Contains(messages)))
+                Console.WriteLine("Press any key..\n");
 
-
-
+            Paymentsally();
         }
+
         public class MenuItems
         {
             public string Name { get; set; }

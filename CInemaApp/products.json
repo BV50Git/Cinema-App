@@ -1,0 +1,78 @@
+[
+  {
+    "Name": "Water",
+    "Price": "2"
+  },
+  {
+    "Name": "Tea",
+    "Price": "2"
+  },
+  {
+    "Name": "Coffee",
+    "Price": "2"
+  },
+  {
+    "Name": "Slushie",
+    "Price": "3"
+  },
+  {
+    "Name": "Milkshakes",
+    "Price": "4"
+  },
+  {
+    "Name": "Soda",
+    "Price": "3"
+  },
+  {
+    "Name": "Beer",
+    "Price": "3"
+  },
+  {
+    "Name": "Wine",
+    "Price": "5"
+  },
+  {
+    "Name": "Small Popcorn",
+    "Price": "3"
+  },
+  {
+    "Name": "Medium Popcorn",
+    "Price": "5"
+  },
+  {
+    "Name": "Big Popcorn",
+    "Price": "7"
+  },
+  {
+    "Name": "Nachos & Dip",
+    "Price": "5"
+  },
+  {
+    "Name": "Cotton Candy",
+    "Price": "3"
+  },
+  {
+    "Name": "Big Cotton Candy",
+    "Price": "5"
+  },
+  {
+    "Name": "Small Ben & Jerry's",
+    "Price": "3"
+  },
+  {
+    "Name": "Big Ben & Jerry's",
+    "Price": "5"
+  },
+  {
+    "Name": "Dunkin Donuts set of 3",
+    "Price": "6"
+  },
+  {
+    "Name": "Dunkin Donuts set of 6",
+    "Price": "10"
+  },
+  {
+    "Name": "Cupcakes",
+    "Price": "2"
+  }
+]
