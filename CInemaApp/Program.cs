@@ -1193,7 +1193,7 @@ namespace CInemaApp
             }
             Console.WriteLine("Movie description: ");
             string description = Console.ReadLine();
-            Console.WriteLine("Movie length: ");
+            Console.WriteLine("Movie length (minutes): ");
             int duration = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Movie genre: ");
             string genre = Console.ReadLine();
