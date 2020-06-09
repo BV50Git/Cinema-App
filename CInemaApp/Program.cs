@@ -541,7 +541,6 @@ namespace CInemaApp
         }
         public static void Paymentsally()
         {
-            Console.WriteLine("You will have to pay " + Globals.total);
             Console.WriteLine("Please choose your payment option");
             string c = "0";
             string s = "";
@@ -646,7 +645,7 @@ namespace CInemaApp
             MenuItems.Add("Cupcakes");
 
 
-            Console.WriteLine("What would you like to order?");
+            Console.WriteLine("What would you like to order? Remember to use Capital Letters!!!");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
 
@@ -654,15 +653,34 @@ namespace CInemaApp
             if (true == (MenuItems.Contains(message)))
                 Console.WriteLine("You have succesfully ordered " + message);
 
-            else
-                Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
+            else 
+                OrderMenu();
 
-            string messages = Console.ReadLine();
-            if (true == (MenuItems.Contains(messages)))
-                Console.WriteLine("You have succesfully ordered \n" + messages);
+            List<MenuItems> SubTotal = new List<MenuItems>();
+            SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Tea", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Coffee", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Slushie", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Milkshakes", Price = "4" });
+            SubTotal.Add(new MenuItems() { Name = "Soda", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Beer", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Wine", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Popcorn", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Medium Popcorn", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Big Popcorn", Price = "7" });
+            SubTotal.Add(new MenuItems() { Name = "Nachos & Dip", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Cotton Candy", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Cotton Candy", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Ben & Jerry's", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Ben & Jerry's", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 3", Price = "6" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
+            SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
 
-            if (false == (MenuItems.Contains(messages)))
-                Console.WriteLine("Press any key..\n");
+            var value = SubTotal.First(item => item.Name == message).Price;
+
+
+            Console.WriteLine("You will have to pay $" + value + "!");
 
             Paymentsally();
 
@@ -952,7 +970,6 @@ namespace CInemaApp
 
     public static void Paymentsally()
     {
-        Console.WriteLine("You will have to pay " + Globals.total);
         Console.WriteLine("Please choose your payment option");
         string c = "0";
         string s = "";
@@ -1057,7 +1074,7 @@ namespace CInemaApp
 
             
 
-            Console.WriteLine("What would you like to order?\n");
+            Console.WriteLine("What would you like to order? Remember to use Capital Letters!!!\n");
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
             Console.WriteLine(Globals.total);
@@ -1067,14 +1084,33 @@ namespace CInemaApp
                 Console.WriteLine("You have succesfully ordered " + message);
 
             else
-                Console.WriteLine("Your choice has not been found in the menu..\nRemember to use Capital Letters!!!\nPlease check your spelling and try again.\n");
-                
-            string messages = Console.ReadLine();
-                if (true == (MenuItems.Contains(messages)))
-                    Console.WriteLine("You have succesfully ordered " + messages);
-                
-                if (false == (MenuItems.Contains(messages)))
-                Console.WriteLine("Press any key..\n");
+                OrderMenu();
+
+            List<MenuItems> SubTotal = new List<MenuItems>();
+            SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Tea", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Coffee", Price = "2" });
+            SubTotal.Add(new MenuItems() { Name = "Slushie", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Milkshakes", Price = "4" });
+            SubTotal.Add(new MenuItems() { Name = "Soda", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Beer", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Wine", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Popcorn", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Medium Popcorn", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Big Popcorn", Price = "7" });
+            SubTotal.Add(new MenuItems() { Name = "Nachos & Dip", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Cotton Candy", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Cotton Candy", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Small Ben & Jerry's", Price = "3" });
+            SubTotal.Add(new MenuItems() { Name = "Big Ben & Jerry's", Price = "5" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 3", Price = "6" });
+            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
+            SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
+
+            var value = SubTotal.First(item => item.Name == message).Price;
+            
+
+            Console.WriteLine("You will have to pay $" + value + "!");
 
             Paymentsally();
         }
