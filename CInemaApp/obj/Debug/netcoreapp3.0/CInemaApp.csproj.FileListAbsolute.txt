@@ -1,0 +1,4 @@
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csprojAssemblyReference.cache
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CoreCompileInputs.cache
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfoInputs.cache
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfo.cs

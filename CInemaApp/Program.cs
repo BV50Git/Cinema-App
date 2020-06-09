@@ -1256,30 +1256,25 @@ namespace CInemaApp
                     break;
                 case "4":
                     STARS();
-                    Console.WriteLine("Welcome to the events page!");
-                    Events();
-                    break;
-                case "5":
-                    STARS();
                     Console.WriteLine("Welcome to Sally's Cafe!");
                     Sally();
                     break;
-                case "6":
+                case "5":
                     STARS();
                     User.Contact();
                     break;
-                case "7":
+                case "6":
                     STARS();
                     addMovie();
                     break;
-                case "8":
+                case "7":
                     STARS();
                     removeMovie();
                     break;
-                case "9":
+                case "8":
                     Subprint();
                     break;
-                case "10":
+                case "9":
                     Console.WriteLine("Goodbye.");
                     Environment.Exit(0);
                     break;
