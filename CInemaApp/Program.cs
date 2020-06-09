@@ -921,13 +921,6 @@ namespace CInemaApp
                 }
             }
         }
-        public static void Events()
-        {
-            Console.WriteLine("Friday horror night all horror movies are 50% off");
-            Console.WriteLine("Saturday Family day every family that comes gain tickets for free food");
-            Console.WriteLine("Sunday premiere night every Sunday night one or more of the upcoming movies will play for the first time");
-            bb();
-        }
         public static void Sally()
         {
             Console.WriteLine("What can I help you with today?");
@@ -1303,13 +1296,12 @@ namespace CInemaApp
             Console.WriteLine("[1] - Current Movies");
             Console.WriteLine("[2] - Upcoming Movies");
             Console.WriteLine("[3] - Movie Prices");
-            Console.WriteLine("[4] - Events");
-            Console.WriteLine("[5] - Sally's Café");
-            Console.WriteLine("[6] - Contact Information");
-            Console.WriteLine("[7] - Add Movie");
-            Console.WriteLine("[8] - Remove movie");
-            Console.WriteLine("[9] - Subscriptions");
-            Console.WriteLine("[10] - Quit");
+            Console.WriteLine("[4] - Sally's Café");
+            Console.WriteLine("[5] - Contact Information");
+            Console.WriteLine("[6] - Add Movie");
+            Console.WriteLine("[7] - Remove movie");
+            Console.WriteLine("[8] - Subscriptions");
+            Console.WriteLine("[9] - Quit");
             STARS();
             Console.WriteLine("Please choose an option to continue.");
 
