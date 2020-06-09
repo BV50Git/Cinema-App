@@ -576,6 +576,7 @@ namespace CInemaApp
         }
         public static void Paymentsally()
         {
+            
             Console.WriteLine("Please choose your payment option");
             string c = "0";
             string s = "";
@@ -653,6 +654,7 @@ namespace CInemaApp
             }
             // shows final ticket and show the time and payment done.
             Console.WriteLine("Everything has been payed for");
+            bb();
         }
 
         public static void OrderMenu()
@@ -1005,6 +1007,7 @@ namespace CInemaApp
 
     public static void Paymentsally()
     {
+        
         Console.WriteLine("Please choose your payment option");
         string c = "0";
         string s = "";
@@ -1082,7 +1085,8 @@ namespace CInemaApp
         }
         // shows final ticket and show the time and payment done.
         Console.WriteLine("Everything has been payed for");
-    }
+        bb();
+        }
     public static void OrderMenu()
         {
 
