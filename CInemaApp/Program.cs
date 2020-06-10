@@ -572,7 +572,7 @@ namespace CInemaApp
         Console.WriteLine("These are the payment options");
         Console.WriteLine("1) IDEAL");
         Console.WriteLine("2) Credit card");
-
+        bb();
         }
         public static void Paymentsally()
         {
@@ -688,11 +688,14 @@ namespace CInemaApp
 
 
             if (true == (MenuItems.Contains(message)))
+            {
                 Console.WriteLine("You have succesfully ordered " + message);
-
+            }
             else
+            {
                 Console.WriteLine("We don't seem to have that in our store, please try again.");
                 OrderMenu();
+            }
 
             List<MenuItems> SubTotal = new List<MenuItems>();
             SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
@@ -927,10 +930,8 @@ namespace CInemaApp
         {
             Console.WriteLine("What can I help you with today?");
             Console.WriteLine("1) Display Food & Drink menu");
-            Console.WriteLine("2) Display payment options");
-            Console.WriteLine("3) Order from Food & Drink menu");
-            Console.WriteLine("4) Exit");
-            Console.WriteLine("Please select your option. You can only choose 1, 2, 3 or 4");
+            Console.WriteLine("2) Exit");
+            Console.WriteLine("Please select your option. You can only choose 1, 2");
 
 
             switch (Console.ReadLine())
@@ -939,14 +940,9 @@ namespace CInemaApp
                     FoodDrinkMenu();
                     break;
                 case "2":
-                    PaymentOption();
-                    break;
-                case "3":
-                    OrderMenu();
-                    break;
-                case "4":
                     Admin.bb();
                     break;
+               
 
             }
 
@@ -982,173 +978,10 @@ namespace CInemaApp
             }
             //string file = JsonConvert.SerializeObject(SubTotal, Formatting.Indented);
             //string js = Directory.GetCurrentDirectory() + "/../../../products.json";
-            
 
-
-            Console.WriteLine("Press any key to order");
-            Console.ReadLine();
-            OrderMenu();
-
+            Exit();
         }
 
-        public static void PaymentOption()
-        {
-            Console.WriteLine("These are the following payment options\n");
-            Console.WriteLine("1) IDEAL");
-            Console.WriteLine("2) Credit card");
-
-
-        }
-
-    public static void Paymentsally()
-    {
-        
-        Console.WriteLine("Please choose your payment option");
-        string c = "0";
-        string s = "";
-        int counter = 1;
-        int options = 2;
-        int i;
-        int j;
-        int height = 9;
-        int width = 9;
-        while (counter < options)
-        {
-            for (i = 1; i <= height; i++)
-            {
-                for (j = 1; j <= width; j++)
-                {
-                    if (i == 1 || i == height || j == 1 || j == width)
-                        s = s + " *";
-                    else
-                        s = s + "  ";
-                }
-                s = s + "\n";
-            }
-            if (counter == 1)
-            {
-                Console.WriteLine(s);
-                Console.WriteLine("   IDEAL (option 1)");
-            }
-            counter = counter + 1;
-        }
-
-        Console.WriteLine(s);
-        Console.WriteLine(" Credit card (option 2)");
-        while (c != "4")
-        {
-            c = Console.ReadLine();
-            if (c == "1")
-            {
-                int d = 0;
-                while (d != 1)
-                {
-                    Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
-                    string information = Console.ReadLine();
-                    if (information.Length != 8)
-                    {
-                        Console.WriteLine("Please try again, you seemed to have typed the wrong code");
-                    }
-                    else if (information.Length == 8)
-                    {
-                        c = "4";
-                        d = 1;
-                    }
-                }
-            }
-            if (c == "2")
-            {
-                int d = 0;
-                while (d != 1)
-                {
-                    Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
-                    string information = Console.ReadLine();
-                    if (information.Length != 8)
-                    {
-                        Console.WriteLine("Please try again, you seemed to have typed the wrong code");
-                    }
-                    else if (information.Length == 8)
-                    {
-                        c = "4";
-                        d = 1;
-                    }
-
-                }
-            }
-
-
-        }
-        // shows final ticket and show the time and payment done.
-        Console.WriteLine("Everything has been payed for");
-        bb();
-        }
-    public static void OrderMenu()
-        {
-
-            List<string> MenuItems = new List<string>();
-            MenuItems.Add("Water");
-            MenuItems.Add("Tea");
-            MenuItems.Add("Coffee");
-            MenuItems.Add("Slushie");
-            MenuItems.Add("Milkshakes");
-            MenuItems.Add("Soda");
-            MenuItems.Add("Beer");
-            MenuItems.Add("Wine\n");
-            MenuItems.Add("Small Popcorn");
-            MenuItems.Add("Medium Popcorn");
-            MenuItems.Add("Big Popcorn");
-            MenuItems.Add("Nachos & Dip");
-            MenuItems.Add("Cotton Candy");
-            MenuItems.Add("Big Cotton Candy");
-            MenuItems.Add("Small Ben & Jerry's");
-            MenuItems.Add("Big Ben & Jerry's");
-            MenuItems.Add("Dunkin Donuts set of 3");
-            MenuItems.Add("Dunkin Donuts set of 6");
-            MenuItems.Add("Cupcakes");
-
-            
-
-            Console.WriteLine("What would you like to order? Remember to use Capital Letters!!!\n");
-            string message = Console.ReadLine();
-            Console.WriteLine("Your choice is: " + message);
-            Console.WriteLine(Globals.total);
-
-
-            if (true == (MenuItems.Contains(message)))
-                Console.WriteLine("You have succesfully ordered " + message);
-
-            else
-                Console.WriteLine("We don't seem to have that in our store, please try again.");
-                OrderMenu();
-
-            List<MenuItems> SubTotal = new List<MenuItems>();
-            SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
-            SubTotal.Add(new MenuItems() { Name = "Tea", Price = "2" });
-            SubTotal.Add(new MenuItems() { Name = "Coffee", Price = "2" });
-            SubTotal.Add(new MenuItems() { Name = "Slushie", Price = "3" });
-            SubTotal.Add(new MenuItems() { Name = "Milkshakes", Price = "4" });
-            SubTotal.Add(new MenuItems() { Name = "Soda", Price = "3" });
-            SubTotal.Add(new MenuItems() { Name = "Beer", Price = "3" });
-            SubTotal.Add(new MenuItems() { Name = "Wine", Price = "5" });
-            SubTotal.Add(new MenuItems() { Name = "Small Popcorn", Price = "3" });
-            SubTotal.Add(new MenuItems() { Name = "Medium Popcorn", Price = "5" });
-            SubTotal.Add(new MenuItems() { Name = "Big Popcorn", Price = "7" });
-            SubTotal.Add(new MenuItems() { Name = "Nachos & Dip", Price = "5" });
-            SubTotal.Add(new MenuItems() { Name = "Cotton Candy", Price = "3" });
-            SubTotal.Add(new MenuItems() { Name = "Big Cotton Candy", Price = "5" });
-            SubTotal.Add(new MenuItems() { Name = "Small Ben & Jerry's", Price = "3" });
-            SubTotal.Add(new MenuItems() { Name = "Big Ben & Jerry's", Price = "5" });
-            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 3", Price = "6" });
-            SubTotal.Add(new MenuItems() { Name = "Dunkin Donuts set of 6", Price = "10" });
-            SubTotal.Add(new MenuItems() { Name = "Cupcakes", Price = "2" });
-
-            var value = SubTotal.First(item => item.Name == message).Price;
-            
-
-            Console.WriteLine("You will have to pay $" + value + "!");
-
-            Paymentsally();
-        }
 
         public class MenuItems
         {
