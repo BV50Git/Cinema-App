@@ -940,14 +940,9 @@ namespace CInemaApp
                     FoodDrinkMenu();
                     break;
                 case "2":
-                    PaymentOption();
-                    break;
-                case "3":
-                    OrderMenu();
-                    break;
-                case "4":
                     Admin.bb();
                     break;
+               
 
             }
 
