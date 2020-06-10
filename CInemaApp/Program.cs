@@ -567,6 +567,7 @@ namespace CInemaApp
         Console.WriteLine(Translation.SR46);
         Console.WriteLine(Translation.SR47);
         Console.WriteLine(Translation.SR48);
+        bb();
 
         }
         public static void Paymentsally()
