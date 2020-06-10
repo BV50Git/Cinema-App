@@ -72,10 +72,10 @@ namespace CinemaApp
             }
             void seatSelection()
             {   
-                Console.WriteLine("Enter the row of the seat you want to reserve (1 - " + height + ")");
+                Console.WriteLine(Translation.SR1 + "(1 - " + height + ")");
                 //int row = userRow;
                 bool parseSucc = int.TryParse(Console.ReadLine(), out userRow);
-                Console.WriteLine("Enter the column of the seat you want to reserve (1 - " + width + ")");
+                Console.WriteLine(Translation.SR2 + "(1 - " + width + ")");
                 parseSucc = int.TryParse(Console.ReadLine(), out userColumn);
                 //int colum = userColumn;
                 
@@ -88,21 +88,21 @@ namespace CinemaApp
                     userSeats[e] = userSeat;
                     showSeats();
                 }
-                else { Console.WriteLine("Unavailible seat, try again."); }
+                else { Console.WriteLine(Translation.SR3); }
                 
             }
             showSeats();
             seatSelection();
             e += 1;
 
-            Console.WriteLine("Type OK to confirm reservation, type anything else to select another seat.");
+            Console.WriteLine(Translation.SR4);
             while(Console.ReadLine() != "OK")
             {       
                 seatSelection();
                 e += 1;
                 Group = Group + 1;
                 Globals.group = Group;
-                Console.WriteLine("Type OK to confirm reservation, type anything else to select a different seat.");
+                Console.WriteLine(Translation.SR4);
 
     
             }

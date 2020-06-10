@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {}
+    "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\CInemaApp.csproj": {}
   },
   "projects": {
-    "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj": {
+    "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\CInemaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
+        "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\CInemaApp.csproj",
         "projectName": "CInemaApp",
-        "projectPath": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
-        "packagesPath": "C:\\Users\\babyg\\.nuget\\packages\\",
-        "outputPath": "D:\\School\\Code\\Github\\Cinema-App\\CInemaApp\\obj\\",
+        "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\CInemaApp.csproj",
+        "packagesPath": "C:\\Users\\basvo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\babyg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\basvo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
