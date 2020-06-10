@@ -270,7 +270,7 @@ namespace CInemaApp
                     int d = 0;
                     while (d != 1)
                     {
-                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        Console.WriteLine("Please enter your Credit Card information, 8 digit code\n *********************");
                         string information = Console.ReadLine();
                         if (information.Length != 8)
                         {
@@ -635,7 +635,7 @@ namespace CInemaApp
                     int d = 0;
                     while (d != 1)
                     {
-                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        Console.WriteLine("Please enter your Credit Card information, 8 digit code\n *********************");
                         string information = Console.ReadLine();
                         if (information.Length != 8)
                         {
@@ -686,13 +686,15 @@ namespace CInemaApp
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
 
-
             if (true == (MenuItems.Contains(message)))
+            {
                 Console.WriteLine("You have succesfully ordered " + message);
-
+            }
             else
-                Console.WriteLine("We don't seem to have that in our store, please try again.");
+            {
+                Console.WriteLine("We don't seem to have that item. Please try again.");
                 OrderMenu();
+            }
 
             List<MenuItems> SubTotal = new List<MenuItems>();
             SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
@@ -1061,7 +1063,7 @@ namespace CInemaApp
                 int d = 0;
                 while (d != 1)
                 {
-                    Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                    Console.WriteLine("Please enter your Credit Card information, 8 digit code\n *********************");
                     string information = Console.ReadLine();
                     if (information.Length != 8)
                     {
@@ -1082,7 +1084,7 @@ namespace CInemaApp
         Console.WriteLine("Everything has been payed for");
         bb();
         }
-    public static void OrderMenu()
+        public static void OrderMenu()
         {
 
             List<string> MenuItems = new List<string>();
@@ -1106,7 +1108,7 @@ namespace CInemaApp
             MenuItems.Add("Dunkin Donuts set of 6");
             MenuItems.Add("Cupcakes");
 
-            
+
 
             Console.WriteLine("What would you like to order? Remember to use Capital Letters!!!\n");
             string message = Console.ReadLine();
@@ -1115,11 +1117,15 @@ namespace CInemaApp
 
 
             if (true == (MenuItems.Contains(message)))
+            {
                 Console.WriteLine("You have succesfully ordered " + message);
+            }
 
             else
-                Console.WriteLine("We don't seem to have that in our store, please try again.");
+            {
+                Console.WriteLine("We don't seem to have that item. Please try again");
                 OrderMenu();
+            }
 
             List<MenuItems> SubTotal = new List<MenuItems>();
             SubTotal.Add(new MenuItems() { Name = "Water", Price = "2" });
@@ -1187,7 +1193,7 @@ namespace CInemaApp
             }
             Console.WriteLine("Movie description: ");
             string description = Console.ReadLine();
-            Console.WriteLine("Movie length: ");
+            Console.WriteLine("Movie length (minutes): ");
             int duration = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Movie genre: ");
             string genre = Console.ReadLine();
