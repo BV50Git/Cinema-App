@@ -10,7 +10,7 @@ public static class Data
     public static List<Movie> LoadMovies()
     {
         // Load the movieData.json here and parse to Movie objects
-        using (StreamReader r = new StreamReader(@"C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\movies.json"))
+        using (StreamReader r = new StreamReader(@"..\..\..\movies.json"))
         {
             string json = r.ReadToEnd();
             List<Movie> items = JsonConvert.DeserializeObject<List<Movie>>(json);

@@ -1,41 +1,32 @@
 [
   {
-    "name": "hgfjhf",
-    "description": "hooi",
-    "duration": 10,
-    "genre": null
+    "name": "Avengers: Endgame",
+    "description": "The final movie in the Avengers series",
+    "duration": 182,
+    "genre": "Superhero movie"
   },
   {
-<<<<<<< Updated upstream
-=======
-    "name": "lord of the rings",
-    "description": "hooi",
-    "duration": 10,
-    "genre": null
+    "name": "Kimi no Nawa",
+    "description": "Two people wake up in each other's bodies",
+    "duration": 112,
+    "genre": "Anime"
   },
   {
->>>>>>> Stashed changes
-    "name": "star wars",
-    "description": "hooi",
-    "duration": 10,
-    "genre": null
+    "name": "Sonic",
+    "description": "A blue antropomorphic hedgehog that can run fast",
+    "duration": 100,
+    "genre": "Fantasy"
   },
   {
-    "name": "test5",
-    "description": "dit is een test",
-    "duration": 10,
-    "genre": null
+    "name": "Black Fox",
+    "description": "A girl who's family has been murdered goes out for revenge",
+    "duration": 100,
+    "genre": "Anime"
   },
   {
-    "name": "test69",
-    "description": "dit is test 69",
-    "duration": 69,
-    "genre": null
-  },
-  {
-    "name": "lord of the rings",
-    "description": "it's about a friendship between a dwarf and a elf and something about a ring",
-    "duration": 360,
-    "genre": "fantasy"
+    "name": "Now You See Me",
+    "description": "A group of magicians/con-artists pull heists all over the world",
+    "duration": 125,
+    "genre": "Heist movie"
   }
 ]

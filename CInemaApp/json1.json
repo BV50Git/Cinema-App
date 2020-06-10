@@ -1,12 +1,10 @@
 {
-  "array_movie_times_and_location": [
-    "movie starts at 9:00 on 5-25-2020 location: Rotterdam, Wijnhaven 107."
-  ],
+  "Newarray": null
+}{
   "Newarray": [
-    "below age 10 10",
-    "age 10 to 15 20",
-    "age 16 to 26 30",
-    "age 27 to 50 40",
-    "50+ 50"
+    "Below age 12 8.00$",
+    "Age 12 to 26 10.00$",
+    "Age 27 to 50 12.50$",
+    "50+ 10.00$"
   ]
 }
