@@ -147,6 +147,7 @@ class Translation
     public static string SR134 = "Enter Nederlands to switch language to Dutch (Nederlands)\nEnter anything else to keep English as the language\n";
     public static string SR135 = "[9] - Language";
     public static string SR136 = "[10] - Quit";
+    public static string SR137 = "50+";
     public static void dutch()
     {
         Console.WriteLine(SR134);
@@ -289,6 +290,7 @@ class Translation
             SR134 = "Typ in: 'English' om de taal te veranderen naar Engels (English)\nTyp iets anders in om Nederlands te behouuden als de taal\n";
             SR135 = "[9] - Taal";
             SR136 = "[10] - Afsluiten";
+            SR137 = "50 jaar of ouder";
         }
         else if(languageSwitch == "English")
         {
@@ -434,6 +436,7 @@ class Translation
             SR134 = "Enter Nederlands to switch language to Dutch (Nederlands)\nEnter anything else to keep English as the language\n";
             SR135 = "[9] - Language";
             SR136 = "[10] - Quit";
+            SR137 = "50+";
 }
         Login.Question();
 

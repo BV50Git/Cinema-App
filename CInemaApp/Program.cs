@@ -25,7 +25,7 @@ namespace CInemaApp
         // creates the price classes on the bases of age
         public string[] Age_prices_array()
         {
-            string[] agebrackets_in_cinema = { Translation.SR55, Translation.SR56, Translation.SR57 };
+            string[] agebrackets_in_cinema = { Translation.SR55, Translation.SR56, Translation.SR57, Translation.SR137 };
             string[] array = { "1", "2", "3", "4" };
             int agebrackets = 4;
             for (int i = 0; i < agebrackets; i++)
