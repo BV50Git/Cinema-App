@@ -270,7 +270,7 @@ namespace CInemaApp
                     int d = 0;
                     while (d != 1)
                     {
-                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        Console.WriteLine("Please enter your Credit Card information, 8 digit code\n *********************");
                         string information = Console.ReadLine();
                         if (information.Length != 8)
                         {
@@ -635,7 +635,7 @@ namespace CInemaApp
                     int d = 0;
                     while (d != 1)
                     {
-                        Console.WriteLine("Please enter your IDEAL information, 8 digit code\n *********************");
+                        Console.WriteLine("Please enter your Credit Card information, 8 digit code\n *********************");
                         string information = Console.ReadLine();
                         if (information.Length != 8)
                         {
@@ -686,14 +686,13 @@ namespace CInemaApp
             string message = Console.ReadLine();
             Console.WriteLine("Your choice is: " + message);
 
-
             if (true == (MenuItems.Contains(message)))
             {
                 Console.WriteLine("You have succesfully ordered " + message);
             }
             else
             {
-                Console.WriteLine("We don't seem to have that in our store, please try again.");
+                Console.WriteLine("We don't seem to have that item. Please try again.");
                 OrderMenu();
             }
 
@@ -1020,7 +1019,7 @@ namespace CInemaApp
             }
             Console.WriteLine("Movie description: ");
             string description = Console.ReadLine();
-            Console.WriteLine("Movie length: ");
+            Console.WriteLine("Movie length (minutes): ");
             int duration = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Movie genre: ");
             string genre = Console.ReadLine();
