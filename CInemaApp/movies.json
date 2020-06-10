@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Avengers: Endgame",
+    "description": "The final movie in the Avengers series",
+    "duration": 182,
+    "genre": "Superhero movie"
+  },
+  {
+    "name": "Kimi no Nawa",
+    "description": "Two people wake up in each other's bodies",
+    "duration": 112,
+    "genre": "Anime"
+  },
+  {
+    "name": "Sonic",
+    "description": "A blue antropomorphic hedgehog that can run fast",
+    "duration": 100,
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Black Fox",
+    "description": "A girl who's family has been murdered goes out for revenge",
+    "duration": 100,
+    "genre": "Anime"
+  },
+  {
+    "name": "Now You See Me",
+    "description": "A group of magicians/con-artists pull heists all over the world",
+    "duration": 125,
+    "genre": "Heist movie"
+  }
+]

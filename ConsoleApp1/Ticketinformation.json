@@ -1,0 +1,206 @@
+[
+  {
+    "Movie": "Bad Boys for Life",
+    "Time": "19:00",
+    "Date": "28/04/2020",
+    "Price": "$11",
+    "Seating": "Row 4, Seat 1"
+  },
+  {
+    "Movie": "Bad Boys for Life",
+    "Time": "19:00",
+    "Date": "28/04/2020",
+    "Price": "$11",
+    "Seating": "Row 4, Seat 2"
+  },
+  {
+    "Movie": "Bad Boys for Life",
+    "Time": "19:00",
+    "Date": "28/04/2020",
+    "Price": "$11",
+    "Seating": "Row 4, Seat 3"
+  },
+  {
+    "Movie": "Bad Boys for Life",
+    "Time": "19:00",
+    "Date": "28/04/2020",
+    "Price": "$11",
+    "Seating": "Row 4, Seat 4"
+  },
+  {
+    "Movie": "Bad Boys for Life",
+    "Time": "19:00",
+    "Date": "28/04/2020",
+    "Price": "$11",
+    "Seating": "Row 4, Seat 5"
+  },
+  {
+    "Movie": "Guardians of the Galaxy",
+    "Time": "21:30",
+    "Date": "28/04/2020",
+    "Price": "$14",
+    "Seating": "Row 7, Seat 7"
+  },
+  {
+    "Movie": "Guardians of the Galaxy",
+    "Time": "21:30",
+    "Date": "28/04/2020",
+    "Price": "$14",
+    "Seating": "Row 7, Seat 8"
+  },
+  {
+    "Movie": "Guardians of the Galaxy",
+    "Time": "21:30",
+    "Date": "28/04/2020",
+    "Price": "$14",
+    "Seating": "Row 7, Seat 9"
+  },
+  {
+    "Movie": "Guardians of the Galaxy",
+    "Time": "21:30",
+    "Date": "28/04/2020",
+    "Price": "$14",
+    "Seating": "Row 7, Seat 10"
+  },
+  {
+    "Event": "Horror Night",
+    "Time": "00:00",
+    "Date": "29/04/2020",
+    "Price": "$15",
+    "Seating": "Row 13, Seat 666"
+  },
+  {
+    "Event": "Horror Night",
+    "Time": "00:00",
+    "Date": "29/04/2020",
+    "Price": "$15",
+    "Seating": "Row 13, Seat 666"
+  },
+  {
+    "Event": "Horror Night",
+    "Time": "00:00",
+    "Date": "29/04/2020",
+    "Price": "$15",
+    "Seating": "Row 13, Seat 666"
+  },
+  {
+    "Event": "Horror Night",
+    "Time": "00:00",
+    "Date": "29/04/2020",
+    "Price": "$15",
+    "Seating": "Row 13, Seat 666"
+  },
+  {
+    "Event": "Horror Night",
+    "Time": "00:00",
+    "Date": "29/04/2020",
+    "Price": "$15",
+    "Seating": "Row 13, Seat 666"
+  },
+  {
+    "Movie": "The Godfather",
+    "Time": "20:00",
+    "Date": "29/05/2020",
+    "Price" "$11",
+    "Seating": "Row 6, Seat 12"
+  },
+  {
+    "Movie": "The Godfather",
+    "Time": "20:00",
+    "Date": "29/05/2020",
+    "Price" "$11",
+    "Seating": "Row 6, Seat 13"
+  },
+  {
+    "Movie": "The Godfather",
+    "Time": "20:00",
+    "Date": "29/05/2020",
+    "Price" "$11",
+    "Seating": "Row 6, Seat 14"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 4"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 5"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 6"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 7"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$15",
+    "Seating": "Row 2, Seat 8"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 5"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 6"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "02/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 7"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "09/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 4"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "09/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 5"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "09/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 6"
+  },
+  {
+    "Event": "Family Night",
+    "Time": "12:00",
+    "Date": "09/05/2020",
+    "Price": "$6",
+    "Seating": "Row 2, Seat 7"
+  }
+  
+]
