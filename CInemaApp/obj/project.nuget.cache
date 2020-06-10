@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5yvNE5qfurT36tFDk8zfTYnbpYngrLt6APZGaX4doohR/FDRxPimU1KpNKeWP18g1w28MWAd9S1gCFnzB/WOlA==",
+  "dgSpecHash": "dN/NP0WEf5XjJWJiYM7i0bWD/f/lMLXh6PbWTEnkdFe2UcKrVt00c38zDb6P2gTOvqBHM+4r2ps/nTA/91B+SA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\CInemaApp.csproj",
+  "projectFilePath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\basvo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\basvo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",

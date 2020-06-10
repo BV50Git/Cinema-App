@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\CInemaApp.csproj",
+      "projectUniqueName": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
       "projectName": "CInemaApp",
-      "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\CInemaApp.csproj",
+      "projectPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\CInemaApp.csproj",
       "packagesPath": "C:\\Users\\basvo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App-test (1)\\Cinema-App-test\\CInemaApp\\obj\\",
+      "outputPath": "C:\\Users\\basvo\\Documents\\GitHub\\Cinema-App\\CInemaApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\basvo\\AppData\\Roaming\\NuGet\\NuGet.Config",
