@@ -1,11 +1,45 @@
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.exe
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.deps.json
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.json
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.dev.json
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.dll
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.pdb
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csprojAssemblyReference.cache
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfoInputs.cache
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfo.cs
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.dll
-C:\Users\jeroe\source\repos\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.pdb
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csprojAssemblyReference.cache
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CoreCompileInputs.cache
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfoInputs.cache
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfo.cs
+D:\School\Code\Github\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.exe
+D:\School\Code\Github\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.deps.json
+D:\School\Code\Github\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.json
+D:\School\Code\Github\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.dev.json
+D:\School\Code\Github\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.dll
+D:\School\Code\Github\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.pdb
+D:\School\Code\Github\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CopyComplete
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.dll
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.pdb
+D:\School\Code\Github\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.genruntimeconfig.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csprojAssemblyReference.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CoreCompileInputs.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfoInputs.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfo.cs
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.pdb
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.exe
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.deps.json
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.json
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.dev.json
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.pdb
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CopyComplete
+C:\Users\basvo\Documents\GitHub\Cinema-App\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.genruntimeconfig.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.exe
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.deps.json
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.json
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.runtimeconfig.dev.json
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\bin\Debug\netcoreapp3.0\CInemaApp.pdb
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csprojAssemblyReference.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CoreCompileInputs.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfoInputs.cache
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.AssemblyInfo.cs
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.csproj.CopyComplete
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.dll
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.pdb
+C:\Users\basvo\Documents\GitHub\Cinema-App-test (1)\Cinema-App-test\CInemaApp\obj\Debug\netcoreapp3.0\CInemaApp.genruntimeconfig.cache
